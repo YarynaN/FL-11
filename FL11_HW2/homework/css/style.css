@@ -29,6 +29,7 @@ write your code here
     text-shadow: 0 .5em #76cdd7;
     letter-spacing: .2em;
     word-spacing: .2em;
+    animation: rotate 5s infinite linear;
 }
 
 /* Task 4 */
@@ -128,4 +129,14 @@ section.blocks li:nth-child(even) {
 /* Task 8 */
 .tm-nav-item-link:hover {
     background-color: #eee;
+}
+
+/* Task 10 */
+@keyframes rotate {
+  30% {
+    transform: rotateY(0deg)
+  }
+  100%{
+    transform: rotateY(360deg)
+  }
 }
