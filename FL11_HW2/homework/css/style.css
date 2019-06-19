@@ -69,6 +69,23 @@ section.heading a.text:after {
     font-weight: bold;
 }
 
+/* Task 6*/
+section.blocks p {
+	font-style: italic
+}
+
+section.blocks p:first-letter {
+	font-size: 1.5em;
+}
+
+section.blocks li {
+	padding: 8px
+}
+
+section.blocks li:nth-child(even) {
+	background-color: #eee;
+}
+
 /* Task 8 */
 .tm-nav-item-link:hover {
     background-color: #eee;
