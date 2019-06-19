@@ -145,23 +145,23 @@
 
     @keyframes rotate {
         30% {
-            transform: rotateY(0deg)
+            transform: rotateY(0deg);
         }
 
         100% {
-            transform: rotateY(360deg)
+            transform: rotateY(360deg);
         }
     }
 
 }
 
 @media print {
-    
-    body{
+
+    body {
         padding-top: unset;
     }
 
-    .tm-main-content{
+    .tm-main-content {
         padding-top: unset;
     }
 
