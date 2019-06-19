@@ -71,19 +71,19 @@ section.heading a.text:after {
 }
 
 /* Task 6*/
-section.blocks p {
+.boxes p {
     font-style: italic
 }
 
-section.blocks p:first-letter {
+.boxes p:first-letter {
     font-size: 1.5em;
 }
 
-section.blocks li {
+.boxes li {
     padding: 8px
 }
 
-section.blocks li:nth-child(even) {
+.boxes li:nth-child(even) {
     background-color: #eee;
 }
 
@@ -131,12 +131,33 @@ section.blocks li:nth-child(even) {
     background-color: #eee;
 }
 
+/* Task 9 */
+.tm-team-description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flex-2-col {
+    display: flex;
+}
+
+h2+p {
+    font-style: italic;
+}
+
+h2~p {
+    line-height: 1.7em;
+    text-indent: 1.5em;
+}
+
 /* Task 10 */
 @keyframes rotate {
-  30% {
-    transform: rotateY(0deg)
-  }
-  100%{
-    transform: rotateY(360deg)
-  }
+    30% {
+        transform: rotateY(0deg)
+    }
+
+    100% {
+        transform: rotateY(360deg)
+    }
 }
