@@ -3,3 +3,10 @@
 write your code here
 
 */
+
+/* Task 2 */
+.tm-section-title-box:hover {
+	color: white;
+	font-weight: bold;
+	background-color: lightskyblue;
+}
