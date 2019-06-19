@@ -10,3 +10,8 @@ write your code here
 	font-weight: bold;
 	background-color: lightskyblue;
 }
+
+/* Task 8 */
+.tm-nav-item-link:hover {
+	background-color: #eee;
+}
