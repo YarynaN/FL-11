@@ -43,6 +43,10 @@
         list-style-type: lower-roman;
     }
 
+    section.heading a {
+        color: black;
+    }
+
     section.heading a:visited {
         color: #ffb347;
     }
@@ -51,6 +55,7 @@
         color: #ffb347;
         font-weight: bold;
         border-left: 3px solid #ffb347;
+        text-decoration: none;
     }
 
     section.heading a.text::after {
@@ -151,6 +156,14 @@
 }
 
 @media print {
+    
+    body{
+        padding-top: unset;
+    }
+
+    .tm-main-content{
+        padding-top: unset;
+    }
 
     .tm-sidebar,
     .tm-team-img,
