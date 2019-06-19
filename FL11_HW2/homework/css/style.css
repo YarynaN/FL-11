@@ -31,6 +31,15 @@ write your code here
     word-spacing: .2em;
 }
 
+/* Task 4 */
+section:before {
+	content: "";
+	display: inline-block;
+	border-style: solid;
+	border-width: 32px 32px 0 0;
+	border-color: lightskyblue transparent transparent transparent;
+}
+
 /* Task 8 */
 .tm-nav-item-link:hover {
     background-color: #eee;
