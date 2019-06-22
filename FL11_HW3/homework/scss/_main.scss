@@ -212,58 +212,60 @@ footer {
             }
         }
     }
+
     .section_banner {
-    	display: flex;
-	    justify-content: space-between;
-	    align-items: center;
-    	width: 1200px;
-    	margin: 175px auto -86px auto;
-    	background-image: linear-gradient(to right, #56870B , #2343CB);
-    	border-radius: 8px;
-    	padding: 45px 128px;
-		z-index: 1;
-		position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 1200px;
+        margin: 175px auto -86px auto;
+        background-image: linear-gradient(to right, #56870B, #2343CB);
+        border-radius: 8px;
+        padding: 45px 128px;
+        z-index: 1;
+        position: relative;
 
-		.section_banner_heading {
-			font-size: 1.7em;
-			font-weight: bold;
-			color: $color-banner-heading;
+        .section_banner_heading {
+            font-size: 1.7em;
+            font-weight: bold;
+            color: $color-banner-heading;
 
-			position: relative;
-        	z-index: 1;
+            position: relative;
+            z-index: 1;
 
-	        &::after {
-	            content: "";
-	            position: absolute;
-	            left: 130px;
-	            border-bottom: 16px solid #188eba;
-	            bottom: -3px;
-	            z-index: -1;
-	            width: 16%;
-        	}
-		}
+            &::after {
+                content: "";
+                position: absolute;
+                left: 130px;
+                border-bottom: 16px solid #188eba;
+                bottom: -3px;
+                z-index: -1;
+                width: 16%;
+            }
+        }
 
-    	.section_banner_text {
-    		color: $color-banner-text;
-    		margin-top: 24px;
-    	}
-    	.section_banner_button {
-			width: 180px;
-			height: 56px;
-			background-color: $color-button;
-			color: white;
-			font-size: 1.3em;
-			border: none;
-			border-radius: 4px;
+        .section_banner_text {
+            color: $color-banner-text;
+            margin-top: 24px;
+        }
 
-			&:hover {
-				background-color: lighten($color-button, 10%);
-			}
+        .section_banner_button {
+            width: 180px;
+            height: 56px;
+            background-color: $color-button;
+            color: white;
+            font-size: 1.3em;
+            border: none;
+            border-radius: 4px;
 
-			&:active {
-				background-color: darken($color-button, 5%);
-			}
-    	}
+            &:hover {
+                background-color: lighten($color-button, 10%);
+            }
+
+            &:active {
+                background-color: darken($color-button, 5%);
+            }
+        }
     }
 }
 
