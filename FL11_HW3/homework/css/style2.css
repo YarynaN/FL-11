@@ -112,7 +112,7 @@ footer {
       width: 440px;
       padding: 28px;
       border-radius: 8px;
-      background-color: #191a23; }
+      background-color: #21232E; }
       .section .section_card_wrap .section_card img {
         width: 100%;
         border-radius: 8px; }
@@ -135,11 +135,51 @@ footer {
         color: #9b9bab;
         text-align: center;
         padding-top: 16px; }
+  .section .section_banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+    margin: 175px auto -86px auto;
+    background-image: linear-gradient(to right, #56870B, #2343CB);
+    border-radius: 8px;
+    padding: 45px 128px;
+    z-index: 1;
+    position: relative; }
+    .section .section_banner .section_banner_heading {
+      font-size: 1.7em;
+      font-weight: bold;
+      color: #21232E;
+      position: relative;
+      z-index: 1; }
+      .section .section_banner .section_banner_heading::after {
+        content: "";
+        position: absolute;
+        left: 130px;
+        border-bottom: 16px solid #188eba;
+        bottom: -3px;
+        z-index: -1;
+        width: 16%; }
+    .section .section_banner .section_banner_text {
+      color: #B3B293;
+      margin-top: 24px; }
+    .section .section_banner .section_banner_button {
+      width: 180px;
+      height: 56px;
+      background-color: #578b02;
+      color: white;
+      font-size: 1.3em;
+      border: none;
+      border-radius: 4px; }
+      .section .section_banner .section_banner_button:hover {
+        background-color: #76bd03; }
+      .section .section_banner .section_banner_button:active {
+        background-color: #477202; }
 
 .footer {
-  padding: 70px 192px;
-  background-color: #191a23;
-  color: #9b9bab; }
+  padding: 140px 192px 70px 192px;
+  background-color: #21232E;
+  color: #ADAFC2; }
   .footer .footer-wrap {
     display: flex;
     justify-content: space-between;
