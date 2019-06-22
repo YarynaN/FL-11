@@ -1,0 +1,92 @@
+* {
+  vertical-align: baseline;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  border: none;
+  padding: 0;
+  margin: 0; }
+
+body {
+  width: 1920px;
+  background-color: #262626;
+  margin: auto;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.2em;
+  line-height: 160%; }
+
+header,
+main,
+footer {
+  background-color: white; }
+
+.header {
+  color: #21232E; }
+  .header .header-wrap {
+    padding: 0 192px;
+    background-image: url(../img/m-h-day.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    border-bottom-right-radius: 36%;
+    height: 900px; }
+  .header .landing-logo {
+    padding: 27px 0;
+    display: flex;
+    align-items: center; }
+    .header .landing-logo img {
+      width: 54px;
+      height: 54px; }
+    .header .landing-logo p {
+      font-family: 'Hind', sans-serif;
+      display: flex;
+      flex-direction: column;
+      font-size: 30px;
+      line-height: 30px;
+      margin-left: 18px;
+      font-weight: bold; }
+      .header .landing-logo p span {
+        font-size: 13.5px;
+        line-height: 13.5px;
+        font-weight: normal;
+        text-align: center; }
+  .header .header_heading,
+  .header .header_text,
+  .header .header_button {
+    margin-top: 58px; }
+  .header .header_heading {
+    font-size: 5em;
+    line-height: 90%;
+    font-weight: bold;
+    width: 50%;
+    position: relative;
+    z-index: 1; }
+    .header .header_heading::after {
+      content: "awesome";
+      position: absolute;
+      left: 0px;
+      border-bottom: 30px solid #188eba;
+      bottom: 0px;
+      z-index: -1;
+      color: transparent; }
+  .header .header_text {
+    white-space: pre-line;
+    letter-spacing: 0.05em; }
+  .header .header_button {
+    width: 180px;
+    height: 56px;
+    background-color: #578b02;
+    color: white;
+    font-size: 1.3em;
+    border: none;
+    border-radius: 4px; }
+    .header .header_button:hover {
+      background-color: #76bd03; }
+    .header .header_button:active {
+      background-color: #477202; }
+
+.section {
+  padding: 0 192px; }
+
+.footer .footer-wrap {
+  padding: 0 192px; }

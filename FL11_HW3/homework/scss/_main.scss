@@ -1,1 +1,145 @@
-// Write your styles here
+//global variables
+$site-width: 1920px;
+$header-height: 900px;
+$content-padding-horizontal: 192px;
+
+$logo-size: 54;
+
+//possible variable names
+$color-background: #262626;
+$color-button: #578b02;
+
+//css reset
+* {
+    vertical-align: baseline;
+    font-family: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+//body
+body {
+    width: $site-width;
+    background-color: $color-background;
+    margin: auto;
+
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.2em;
+    line-height: 160%;
+}
+
+header,
+main,
+footer {
+    background-color: white;
+
+}
+
+
+//header
+.header {
+    color: #21232E;
+
+    .header-wrap {
+        padding: 0 $content-padding-horizontal;
+        background-image: url(../img/m-h-day.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        border-bottom-right-radius: 36%;
+        height: $header-height;
+    }
+
+    .landing-logo {
+        padding: ($logo-size / 2.0)+px 0;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: $logo-size+px;
+            height: $logo-size+px;
+        }
+
+        p {
+            font-family: 'Hind', sans-serif;
+            display: flex;
+            flex-direction: column;
+            font-size: ($logo-size / 1.8)+px;
+            line-height: ($logo-size / 1.8)+px;
+            margin-left: ($logo-size / 3.0)+px;
+            font-weight: bold;
+
+            span {
+                font-size: ($logo-size / 4.0)+px;
+                line-height: ($logo-size / 4.0)+px;
+                font-weight: normal;
+                text-align: center;
+            }
+        }
+    }
+
+    .header_heading,
+    .header_text,
+    .header_button {
+        margin-top: 58px;
+    }
+
+    .header_heading {
+        font-size: 5em;
+        line-height: 90%;
+        font-weight: bold;
+        width: 50%;
+
+        //underline
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            content: "awesome";
+            position: absolute;
+            left: 0px;
+            border-bottom: 30px solid #188eba;
+            bottom: 0px;
+            z-index: -1;
+            color: transparent;
+        }
+    }
+
+    .header_text {
+        white-space: pre-line;
+        letter-spacing: 0.05em;
+    }
+
+    .header_button {
+        width: 180px;
+        height: 56px;
+        background-color: $color-button;
+        color: white;
+        font-size: 1.3em;
+        border: none;
+        border-radius: 4px;
+
+        &:hover {
+            background-color: lighten($color-button, 10%);
+        }
+
+        &:active {
+            background-color: darken($color-button, 5%);
+        }
+    }
+}
+
+//contet
+.section {
+    padding: 0 $content-padding-horizontal;
+}
+
+//footer
+.footer {
+    .footer-wrap {
+        padding: 0 $content-padding-horizontal;
+    }
+}
