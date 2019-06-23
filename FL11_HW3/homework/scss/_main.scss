@@ -6,14 +6,7 @@ $content-padding-horizontal: 192px;
 $logo-size: 54;
 
 //possible variable names
-$color-background: #262626;
-$color-button: #578b02;
-$color-card: #21232E;
-$color-card-text: #9b9bab;
-$color-footer: #21232E;
-$color-footer-text: #ADAFC2;
-$color-banner-text: #B3B293;
-$color-banner-heading: #21232E;
+
 
 //css reset
 * {
@@ -40,7 +33,7 @@ body {
 header,
 main,
 footer {
-    background-color: white;
+    background-color: $color-background-site;
 
 }
 
@@ -78,7 +71,7 @@ footer {
 
     .header-wrap {
         padding: 0 $content-padding-horizontal;
-        background-image: url(../img/m-h-day.jpg);
+        background-image: $background-image-header;
         background-repeat: no-repeat;
         background-position: center;
         background-size: 100%;

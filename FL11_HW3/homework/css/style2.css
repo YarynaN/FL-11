@@ -18,7 +18,7 @@ body {
 header,
 main,
 footer {
-  background-color: white; }
+  background-color: #191A23; }
 
 .landing-logo {
   padding: 27px 0;
@@ -45,7 +45,7 @@ footer {
   color: #21232E; }
   .header .header-wrap {
     padding: 0 192px;
-    background-image: url(../img/m-h-day.jpg);
+    background-image: url(../img/m-h-night.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -76,15 +76,15 @@ footer {
   .header .header_button {
     width: 180px;
     height: 56px;
-    background-color: #578b02;
+    background-color: #DB9D08;
     color: white;
     font-size: 1.3em;
     border: none;
     border-radius: 4px; }
     .header .header_button:hover {
-      background-color: #76bd03; }
+      background-color: #f7b71f; }
     .header .header_button:active {
-      background-color: #477202; }
+      background-color: #c28b07; }
 
 .section {
   padding: 0 192px; }
@@ -112,7 +112,7 @@ footer {
       width: 440px;
       padding: 28px;
       border-radius: 8px;
-      background-color: #21232E; }
+      background-color: #2D2F3E; }
       .section .section_card_wrap .section_card img {
         width: 100%;
         border-radius: 8px; }
@@ -149,7 +149,7 @@ footer {
     .section .section_banner .section_banner_heading {
       font-size: 1.7em;
       font-weight: bold;
-      color: #21232E;
+      color: white;
       position: relative;
       z-index: 1; }
       .section .section_banner .section_banner_heading::after {
@@ -166,19 +166,19 @@ footer {
     .section .section_banner .section_banner_button {
       width: 180px;
       height: 56px;
-      background-color: #578b02;
+      background-color: #DB9D08;
       color: white;
       font-size: 1.3em;
       border: none;
       border-radius: 4px; }
       .section .section_banner .section_banner_button:hover {
-        background-color: #76bd03; }
+        background-color: #f7b71f; }
       .section .section_banner .section_banner_button:active {
-        background-color: #477202; }
+        background-color: #c28b07; }
 
 .footer {
   padding: 140px 192px 70px 192px;
-  background-color: #21232E;
+  background-color: #2D2F3E;
   color: #ADAFC2; }
   .footer .footer-wrap {
     display: flex;
