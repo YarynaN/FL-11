@@ -6,286 +6,285 @@ $content-padding-horizontal: 192px;
 $logo-size: 54px;
 
 
-
 //possible variable names
 
 
 //css reset
 * {
-    vertical-align: baseline;
-    font-family: inherit;
-    font-style: inherit;
-    font-size: 100%;
-    border: none;
-    padding: 0;
-    margin: 0;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 //body
 body {
-    width: $site-width;
-    background-color: $color-background;
-    margin: auto;
+  width: $site-width;
+  background-color: $color-background;
+  margin: auto;
 
-    font-family: $font-main;
-    font-size: 1.2em;
-    line-height: 160%;
+  font-family: $font-main;
+  font-size: 1.2em;
+  line-height: 160%;
 }
 
 header,
 main,
 footer {
-    background-color: $color-background-site;
+  background-color: $color-background-site;
 
 }
 
 .landing-logo {
-    padding: $logo-size / 2.0 0;
+  padding: $logo-size / 2.0 0;
+  display: flex;
+  align-items: center;
+
+  img {
+    width: $logo-size;
+    height: $logo-size;
+  }
+
+  p {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    font-size: $logo-size / 1.8;
+    line-height: $logo-size / 1.8;
+    margin-left: $logo-size / 3.0;
+    font-weight: bold;
 
-    img {
-        width: $logo-size;
-        height: $logo-size;
+    span {
+      font-size: $logo-size / 4.0;
+      line-height: $logo-size / 4.0;
+      font-weight: normal;
+      text-align: center;
     }
-
-    p {
-        display: flex;
-        flex-direction: column;
-        font-size: $logo-size / 1.8;
-        line-height: $logo-size / 1.8;
-        margin-left: $logo-size / 3.0;
-        font-weight: bold;
-
-        span {
-            font-size: $logo-size / 4.0;
-            line-height: $logo-size / 4.0;
-            font-weight: normal;
-            text-align: center;
-        }
-    }
+  }
 }
 
 //header
 .header {
-    color: $color-header;
+  color: $color-header;
 
-    .header-wrap {
-        padding: 0 $content-padding-horizontal;
-        background-image: $header-background-image;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100%;
-        border-bottom-right-radius: 36%;
-        height: $header-height;
+  .header-wrap {
+    padding: 0 $content-padding-horizontal;
+    background-image: $header-background-image;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    border-bottom-right-radius: 36%;
+    height: $header-height;
+  }
+
+  .header_heading,
+  .header_text,
+  .header_button {
+    margin-top: 58px;
+  }
+
+  .header_heading {
+    font-size: 5em;
+    font-family: $font-secondary;
+    line-height: 90%;
+    font-weight: bold;
+    width: 50%;
+
+    //underline
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      content: "awesome";
+      position: absolute;
+      left: 0px;
+      border-bottom: 30px solid $color-underline;
+      bottom: 0px;
+      z-index: -1;
+      color: transparent;
+    }
+  }
+
+  .header_text {
+    white-space: pre-line;
+    letter-spacing: 0.05em;
+  }
+
+  .header_button {
+    width: 180px;
+    height: 56px;
+    background-color: $color-button;
+    color: white;
+    font-size: 1.3em;
+    font-family: $font-secondary;
+    border: none;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: lighten($color-button, 10%);
     }
 
-    .header_heading,
-    .header_text,
-    .header_button {
-        margin-top: 58px;
+    &:active {
+      background-color: darken($color-button, 5%);
     }
-
-    .header_heading {
-        font-size: 5em;
-        font-family: $font-secondary;
-        line-height: 90%;
-        font-weight: bold;
-        width: 50%;
-
-        //underline
-        position: relative;
-        z-index: 1;
-
-        &::after {
-            content: "awesome";
-            position: absolute;
-            left: 0px;
-            border-bottom: 30px solid $color-underline;
-            bottom: 0px;
-            z-index: -1;
-            color: transparent;
-        }
-    }
-
-    .header_text {
-        white-space: pre-line;
-        letter-spacing: 0.05em;
-    }
-
-    .header_button {
-        width: 180px;
-        height: 56px;
-        background-color: $color-button;
-        color: white;
-        font-size: 1.3em;
-        font-family: $font-secondary;
-        border: none;
-        border-radius: 4px;
-
-        &:hover {
-            background-color: lighten($color-button, 10%);
-        }
-
-        &:active {
-            background-color: darken($color-button, 5%);
-        }
-    }
+  }
 }
 
 //contet
 .section {
-    padding: 0 $content-padding-horizontal;
+  padding: 0 $content-padding-horizontal;
 
-    .section_text {
-        font-size: 2.5em;
+  .section_text {
+    font-size: 2.5em;
+    font-family: $font-secondary;
+    margin: auto;
+    width: max-content;
+    padding-top: 64px;
+    color: $color-header;
+
+    //underline
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 12px;
+      border-bottom: 16px solid $color-underline;
+      bottom: -6px;
+      z-index: -1;
+      width: 45%;
+    }
+  }
+
+  .section_card_wrap {
+    padding-top: 64px;
+    display: flex;
+    justify-content: space-between;
+
+    .section_card {
+      //flex: 1;
+      // margin-left: 14px;
+      // margin-right: 14px;
+      width: 440px;
+      padding: 28px;
+      border-radius: 8px;
+      background-color: $color-card;
+
+      img {
+        width: 100%;
+        border-radius: 8px;
+      }
+
+      .section_card_heading {
+        font-size: 1.5em;
         font-family: $font-secondary;
-        margin: auto;
-        width: max-content;
-        padding-top: 64px;
-        color: $color-header;
+        color: white;
+        padding-top: 16px;
 
         //underline
         position: relative;
         z-index: 1;
+        margin: auto;
+        width: max-content;
 
-        &::after {
-            content: "";
-            position: absolute;
-            right: 12px;
-            border-bottom: 16px solid $color-underline;
-            bottom: -6px;
-            z-index: -1;
-            width: 45%;
+        .section_card_underline {
+          position: absolute;
+          left: 0;
+          bottom: 0px;
+          border-bottom: 16px solid $color-underline;
+          // background-color: #188eba;
+          // height: 30%;
+          z-index: -1;
+          width: 100%;
         }
+      }
+
+      .section_card_text {
+        color: $color-card-text;
+        text-align: center;
+        padding-top: 16px;
+      }
+    }
+  }
+
+  .section_banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+    margin: 175px auto -86px auto;
+    background-image: linear-gradient($banner-gradient);
+    border-radius: 8px;
+    padding: 45px 128px;
+    z-index: 1;
+    position: relative;
+
+    .section_banner_heading {
+      font-size: 1.7em;
+      font-family: $font-secondary;
+      font-weight: bold;
+      color: $color-banner-heading;
+
+      position: relative;
+      z-index: 1;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 130px;
+        border-bottom: 16px solid $color-underline;
+        bottom: -3px;
+        z-index: -1;
+        width: 16%;
+      }
     }
 
-    .section_card_wrap {
-        padding-top: 64px;
-        display: flex;
-        justify-content: space-between;
-
-        .section_card {
-            //flex: 1;
-            // margin-left: 14px;
-            // margin-right: 14px;
-            width: 440px;
-            padding: 28px;
-            border-radius: 8px;
-            background-color: $color-card;
-
-            img {
-                width: 100%;
-                border-radius: 8px;
-            }
-
-            .section_card_heading {
-                font-size: 1.5em;
-                font-family: $font-secondary;
-                color: white;
-                padding-top: 16px;
-
-                //underline
-                position: relative;
-                z-index: 1;
-                margin: auto;
-                width: max-content;
-
-                .section_card_underline {
-                    position: absolute;
-                    left: 0;
-                    bottom: 0px;
-                    border-bottom: 16px solid $color-underline;
-                    // background-color: #188eba;
-                    // height: 30%;
-                    z-index: -1;
-                    width: 100%;
-                }
-            }
-
-            .section_card_text {
-                color: $color-card-text;
-                text-align: center;
-                padding-top: 16px;
-            }
-        }
+    .section_banner_text {
+      color: $color-banner-text;
+      margin-top: 24px;
     }
 
-    .section_banner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 1200px;
-        margin: 175px auto -86px auto;
-        background-image: linear-gradient($banner-gradient);
-        border-radius: 8px;
-        padding: 45px 128px;
-        z-index: 1;
-        position: relative;
+    .section_banner_button {
+      width: 180px;
+      height: 56px;
+      background-color: $color-button;
+      color: white;
+      font-size: 1.3em;
+      font-family: $font-secondary;
+      border: none;
+      border-radius: 4px;
 
-        .section_banner_heading {
-            font-size: 1.7em;
-            font-family: $font-secondary;
-            font-weight: bold;
-            color: $color-banner-heading;
+      &:hover {
+        background-color: lighten($color-button, 10%);
+      }
 
-            position: relative;
-            z-index: 1;
-
-            &::after {
-                content: "";
-                position: absolute;
-                left: 130px;
-                border-bottom: 16px solid $color-underline;
-                bottom: -3px;
-                z-index: -1;
-                width: 16%;
-            }
-        }
-
-        .section_banner_text {
-            color: $color-banner-text;
-            margin-top: 24px;
-        }
-
-        .section_banner_button {
-            width: 180px;
-            height: 56px;
-            background-color: $color-button;
-            color: white;
-            font-size: 1.3em;
-            font-family: $font-secondary;
-            border: none;
-            border-radius: 4px;
-
-            &:hover {
-                background-color: lighten($color-button, 10%);
-            }
-
-            &:active {
-                background-color: darken($color-button, 5%);
-            }
-        }
+      &:active {
+        background-color: darken($color-button, 5%);
+      }
     }
+  }
 }
 
 
 //footer
 .footer {
-    padding: 140px $content-padding-horizontal 70px $content-padding-horizontal;
-    background-color: $color-footer;
-    color: $color-footer-text;
+  padding: 140px $content-padding-horizontal 70px $content-padding-horizontal;
+  background-color: $color-footer;
+  color: $color-footer-text;
 
-    .footer-wrap {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+  .footer-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    .footer_text {
-        text-align: left;
-        width: 30%;
-    }
+  .footer_text {
+    text-align: left;
+    width: 30%;
+  }
 
 
 }
