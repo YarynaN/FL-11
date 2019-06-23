@@ -32,22 +32,22 @@ footer {
   background-color: white; }
 
 .landing-logo {
-  padding: 27px 0;
+  padding: 26px 0;
   display: flex;
   align-items: center; }
   .landing-logo img {
-    width: 54px;
-    height: 54px; }
+    width: 52px;
+    height: 52px; }
   .landing-logo p {
     display: flex;
     flex-direction: column;
-    font-size: 30px;
-    line-height: 30px;
-    margin-left: 18px;
+    font-size: 32.5px;
+    line-height: 32.5px;
+    margin-left: 20px;
     font-weight: bold; }
     .landing-logo p span {
-      font-size: 13.5px;
-      line-height: 13.5px;
+      font-size: 13px;
+      line-height: 13px;
       font-weight: normal;
       text-align: center; }
 
@@ -141,7 +141,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1200px;
+    width: 944px;
     margin: 175px auto -86px auto;
     background-image: linear-gradient(to right, #56870B, #2343CB);
     border-radius: 8px;
