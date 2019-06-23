@@ -38,9 +38,6 @@ $logo-size: 54px;
   }
 }
 
-//possible variable names
-
-
 //css reset
 * {
   vertical-align: baseline;
@@ -57,7 +54,6 @@ body {
   width: $site-width;
   background-color: $color-background;
   margin: auto;
-
   font-family: $font-main;
   font-size: 1.2em;
   line-height: 160%;
@@ -67,7 +63,6 @@ header,
 main,
 footer {
   background-color: $color-background-site;
-
 }
 
 .landing-logo {
@@ -249,7 +244,6 @@ footer {
   }
 }
 
-
 //footer
 .footer {
   padding: 140px $content-padding-horizontal 70px $content-padding-horizontal;
@@ -266,6 +260,4 @@ footer {
     text-align: left;
     width: 30%;
   }
-
-
 }
