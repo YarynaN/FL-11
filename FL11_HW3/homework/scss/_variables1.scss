@@ -1,5 +1,11 @@
-$font-secondary: 'Source Sans Pro', sans-serif;
-$font-main: 'Hind', sans-serif;
+$fonts: (
+  hind: ('Hind', sans-serif),
+  fresca: ('Fresca', sans-serif),
+  source-sans-pro: ('Source Sans Pro', sans-serif),
+);
+
+$font-main: map-get($fonts, hind);
+$font-secondary: map-get($fonts, source-sans-pro);
 
 $color-background: #262626;
 $color-background-site: white;

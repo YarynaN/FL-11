@@ -5,6 +5,38 @@ $content-padding-horizontal: 192px;
 
 $logo-size: 54px;
 
+@mixin button() {
+  width: 180px;
+  height: 56px;
+  background-color: $color-button;
+  color: white;
+  font-size: 1.3em;
+  font-family: $font-secondary;
+  border: none;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: lighten($color-button, 10%);
+  }
+
+  &:active {
+    background-color: darken($color-button, 5%);
+  }
+}
+
+.underlined-text {
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    border-bottom: 30px solid $color-underline;
+    bottom: 0px;
+    z-index: -1;
+    color: transparent;
+  }
+}
 
 //possible variable names
 
@@ -92,18 +124,11 @@ footer {
     font-weight: bold;
     width: 50%;
 
-    //underline
-    position: relative;
-    z-index: 1;
+    @extend .underlined-text;
 
     &::after {
       content: "awesome";
-      position: absolute;
       left: 0px;
-      border-bottom: 30px solid $color-underline;
-      bottom: 0px;
-      z-index: -1;
-      color: transparent;
     }
   }
 
@@ -113,26 +138,11 @@ footer {
   }
 
   .header_button {
-    width: 180px;
-    height: 56px;
-    background-color: $color-button;
-    color: white;
-    font-size: 1.3em;
-    font-family: $font-secondary;
-    border: none;
-    border-radius: 4px;
-
-    &:hover {
-      background-color: lighten($color-button, 10%);
-    }
-
-    &:active {
-      background-color: darken($color-button, 5%);
-    }
+    @include button();
   }
 }
 
-//contet
+//content
 .section {
   padding: 0 $content-padding-horizontal;
 
@@ -144,18 +154,13 @@ footer {
     padding-top: 64px;
     color: $color-header;
 
-    //underline
-    position: relative;
-    z-index: 1;
+    @extend .underlined-text;
 
     &::after {
-      content: "";
-      position: absolute;
       right: 12px;
-      border-bottom: 16px solid $color-underline;
       bottom: -6px;
-      z-index: -1;
       width: 45%;
+      border-bottom-width: 16px;
     }
   }
 
@@ -165,9 +170,6 @@ footer {
     justify-content: space-between;
 
     .section_card {
-      //flex: 1;
-      // margin-left: 14px;
-      // margin-right: 14px;
       width: 440px;
       padding: 28px;
       border-radius: 8px;
@@ -195,8 +197,6 @@ footer {
           left: 0;
           bottom: 0px;
           border-bottom: 16px solid $color-underline;
-          // background-color: #188eba;
-          // height: 30%;
           z-index: -1;
           width: 100%;
         }
@@ -228,17 +228,13 @@ footer {
       font-weight: bold;
       color: $color-banner-heading;
 
-      position: relative;
-      z-index: 1;
+      @extend .underlined-text;
 
       &::after {
-        content: "";
-        position: absolute;
         left: 130px;
-        border-bottom: 16px solid $color-underline;
         bottom: -3px;
-        z-index: -1;
         width: 16%;
+        border-bottom-width: 16px;
       }
     }
 
@@ -248,22 +244,7 @@ footer {
     }
 
     .section_banner_button {
-      width: 180px;
-      height: 56px;
-      background-color: $color-button;
-      color: white;
-      font-size: 1.3em;
-      font-family: $font-secondary;
-      border: none;
-      border-radius: 4px;
-
-      &:hover {
-        background-color: lighten($color-button, 10%);
-      }
-
-      &:active {
-        background-color: darken($color-button, 5%);
-      }
+      @include button();
     }
   }
 }

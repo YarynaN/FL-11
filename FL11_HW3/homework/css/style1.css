@@ -1,3 +1,14 @@
+.underlined-text, .header .header_heading, .section .section_text, .section .section_banner .section_banner_heading {
+  position: relative;
+  z-index: 1; }
+  .underlined-text::after, .header .header_heading::after, .section .section_text::after, .section .section_banner .section_banner_heading::after {
+    content: "";
+    position: absolute;
+    border-bottom: 30px solid #188eba;
+    bottom: 0px;
+    z-index: -1;
+    color: transparent; }
+
 * {
   vertical-align: baseline;
   font-family: inherit;
@@ -59,17 +70,10 @@ footer {
     font-family: "Source Sans Pro", sans-serif;
     line-height: 90%;
     font-weight: bold;
-    width: 50%;
-    position: relative;
-    z-index: 1; }
+    width: 50%; }
     .header .header_heading::after {
       content: "awesome";
-      position: absolute;
-      left: 0px;
-      border-bottom: 30px solid #188eba;
-      bottom: 0px;
-      z-index: -1;
-      color: transparent; }
+      left: 0px; }
   .header .header_text {
     white-space: pre-line;
     letter-spacing: 0.05em; }
@@ -95,17 +99,12 @@ footer {
     margin: auto;
     width: max-content;
     padding-top: 64px;
-    color: #2c2f3C;
-    position: relative;
-    z-index: 1; }
+    color: #2c2f3C; }
     .section .section_text::after {
-      content: "";
-      position: absolute;
       right: 12px;
-      border-bottom: 16px solid #188eba;
       bottom: -6px;
-      z-index: -1;
-      width: 45%; }
+      width: 45%;
+      border-bottom-width: 16px; }
   .section .section_card_wrap {
     padding-top: 64px;
     display: flex;
@@ -153,17 +152,12 @@ footer {
       font-size: 1.7em;
       font-family: "Source Sans Pro", sans-serif;
       font-weight: bold;
-      color: #2c2f3c;
-      position: relative;
-      z-index: 1; }
+      color: #2c2f3c; }
       .section .section_banner .section_banner_heading::after {
-        content: "";
-        position: absolute;
         left: 130px;
-        border-bottom: 16px solid #188eba;
         bottom: -3px;
-        z-index: -1;
-        width: 16%; }
+        width: 16%;
+        border-bottom-width: 16px; }
     .section .section_banner .section_banner_text {
       color: #B3B293;
       margin-top: 24px; }
