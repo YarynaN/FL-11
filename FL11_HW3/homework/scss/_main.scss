@@ -3,7 +3,9 @@ $site-width: 1920px;
 $header-height: 900px;
 $content-padding-horizontal: 192px;
 
-$logo-size: 54;
+$logo-size: 54px;
+
+
 
 //possible variable names
 
@@ -25,7 +27,7 @@ body {
     background-color: $color-background;
     margin: auto;
 
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: $font-main;
     font-size: 1.2em;
     line-height: 160%;
 }
@@ -38,27 +40,26 @@ footer {
 }
 
 .landing-logo {
-    padding: ($logo-size / 2.0)+px 0;
+    padding: $logo-size / 2.0 0;
     display: flex;
     align-items: center;
 
     img {
-        width: $logo-size+px;
-        height: $logo-size+px;
+        width: $logo-size;
+        height: $logo-size;
     }
 
     p {
-        font-family: 'Hind', sans-serif;
         display: flex;
         flex-direction: column;
-        font-size: ($logo-size / 1.8)+px;
-        line-height: ($logo-size / 1.8)+px;
-        margin-left: ($logo-size / 3.0)+px;
+        font-size: $logo-size / 1.8;
+        line-height: $logo-size / 1.8;
+        margin-left: $logo-size / 3.0;
         font-weight: bold;
 
         span {
-            font-size: ($logo-size / 4.0)+px;
-            line-height: ($logo-size / 4.0)+px;
+            font-size: $logo-size / 4.0;
+            line-height: $logo-size / 4.0;
             font-weight: normal;
             text-align: center;
         }
@@ -67,11 +68,11 @@ footer {
 
 //header
 .header {
-    color: #21232E;
+    color: $color-header;
 
     .header-wrap {
         padding: 0 $content-padding-horizontal;
-        background-image: $background-image-header;
+        background-image: $header-background-image;
         background-repeat: no-repeat;
         background-position: center;
         background-size: 100%;
@@ -87,6 +88,7 @@ footer {
 
     .header_heading {
         font-size: 5em;
+        font-family: $font-secondary;
         line-height: 90%;
         font-weight: bold;
         width: 50%;
@@ -99,7 +101,7 @@ footer {
             content: "awesome";
             position: absolute;
             left: 0px;
-            border-bottom: 30px solid #188eba;
+            border-bottom: 30px solid $color-underline;
             bottom: 0px;
             z-index: -1;
             color: transparent;
@@ -117,6 +119,7 @@ footer {
         background-color: $color-button;
         color: white;
         font-size: 1.3em;
+        font-family: $font-secondary;
         border: none;
         border-radius: 4px;
 
@@ -136,9 +139,11 @@ footer {
 
     .section_text {
         font-size: 2.5em;
+        font-family: $font-secondary;
         margin: auto;
         width: max-content;
         padding-top: 64px;
+        color: $color-header;
 
         //underline
         position: relative;
@@ -148,7 +153,7 @@ footer {
             content: "";
             position: absolute;
             right: 12px;
-            border-bottom: 16px solid #188eba;
+            border-bottom: 16px solid $color-underline;
             bottom: -6px;
             z-index: -1;
             width: 45%;
@@ -159,7 +164,6 @@ footer {
         padding-top: 64px;
         display: flex;
         justify-content: space-between;
-        font-family: 'Hind', sans-serif;
 
         .section_card {
             //flex: 1;
@@ -177,6 +181,7 @@ footer {
 
             .section_card_heading {
                 font-size: 1.5em;
+                font-family: $font-secondary;
                 color: white;
                 padding-top: 16px;
 
@@ -190,7 +195,7 @@ footer {
                     position: absolute;
                     left: 0;
                     bottom: 0px;
-                    border-bottom: 16px solid #188eba;
+                    border-bottom: 16px solid $color-underline;
                     // background-color: #188eba;
                     // height: 30%;
                     z-index: -1;
@@ -212,7 +217,7 @@ footer {
         align-items: center;
         width: 1200px;
         margin: 175px auto -86px auto;
-        background-image: linear-gradient(to right, #56870B, #2343CB);
+        background-image: linear-gradient($banner-gradient);
         border-radius: 8px;
         padding: 45px 128px;
         z-index: 1;
@@ -220,6 +225,7 @@ footer {
 
         .section_banner_heading {
             font-size: 1.7em;
+            font-family: $font-secondary;
             font-weight: bold;
             color: $color-banner-heading;
 
@@ -230,7 +236,7 @@ footer {
                 content: "";
                 position: absolute;
                 left: 130px;
-                border-bottom: 16px solid #188eba;
+                border-bottom: 16px solid $color-underline;
                 bottom: -3px;
                 z-index: -1;
                 width: 16%;
@@ -248,6 +254,7 @@ footer {
             background-color: $color-button;
             color: white;
             font-size: 1.3em;
+            font-family: $font-secondary;
             border: none;
             border-radius: 4px;
 
