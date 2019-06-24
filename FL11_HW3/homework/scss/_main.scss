@@ -139,6 +139,7 @@ footer {
   .section_text {
     font-size: 2.5em;
     font-family: $font-secondary;
+    font-weight: 600;
     margin: auto;
     width: max-content;
     padding-top: 64px;
@@ -158,44 +159,45 @@ footer {
     padding-top: 64px;
     display: flex;
     justify-content: space-between;
+  }
 
-    .section_card {
-      width: 440px;
-      padding: 28px;
+  .section_card {
+    width: 440px;
+    padding: 28px;
+    border-radius: 8px;
+    background-color: $color-card;
+
+    img {
+      width: 100%;
       border-radius: 8px;
-      background-color: $color-card;
+    }
 
-      img {
+    .section_card_heading {
+      font-size: 1.5em;
+      font-family: $font-secondary;
+      font-weight: 600;
+      color: white;
+      padding-top: 16px;
+
+      position: relative;
+      z-index: 1;
+      margin: auto;
+      width: max-content;
+
+      .section_card_underline {
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        border-bottom: 16px solid $color-underline;
+        z-index: -1;
         width: 100%;
-        border-radius: 8px;
       }
+    }
 
-      .section_card_heading {
-        font-size: 1.5em;
-        font-family: $font-secondary;
-        color: white;
-        padding-top: 16px;
-
-        position: relative;
-        z-index: 1;
-        margin: auto;
-        width: max-content;
-
-        .section_card_underline {
-          position: absolute;
-          left: 0;
-          bottom: 0px;
-          border-bottom: 16px solid $color-underline;
-          z-index: -1;
-          width: 100%;
-        }
-      }
-
-      .section_card_text {
-        color: $color-card-text;
-        text-align: center;
-        padding-top: 16px;
-      }
+    .section_card_text {
+      color: $color-card-text;
+      text-align: center;
+      padding-top: 16px;
     }
   }
 
@@ -214,7 +216,7 @@ footer {
     .section_banner_heading {
       font-size: 1.7em;
       font-family: $font-secondary;
-      font-weight: bold;
+      font-weight: 600;
       color: $color-banner-heading;
 
       @extend .underlined-text;
