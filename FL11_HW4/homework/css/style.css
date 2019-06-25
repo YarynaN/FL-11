@@ -1,3 +1,6 @@
+body {
+  min-width: 900px; }
+
 header {
   background-image: url("../img/sample2.jpg");
   background-repeat: no-repeat;
