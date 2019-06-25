@@ -3,12 +3,19 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
-  height: 800px; }
-  header .h-top-heading {
+  height: 800px;
+
+  .h-top-heading {
     display: flex;
-    justify-content: space-between; }
-  header .h-title {
-    text-align: center; }
-  header h1 {
+    justify-content: space-between;
+  }
+
+  .h-title {
+    text-align: center;
+  }
+
+  h1 {
     font-size: 4em;
-    font-weight: normal; }
+    font-weight: normal;
+  }
+}
