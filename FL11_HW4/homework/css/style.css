@@ -1,17 +1,106 @@
+* {
+    vertical-align: baseline;
+    font-style: inherit;
+    font-size: 100%;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
 body {
-  min-width: 900px; }
+    width: 900px;
+    margin: 0 auto;
+    font-family: Open Sans, sans-serif;
+}
 
 header {
-  background-image: url("../img/sample2.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  height: 800px; }
-  header .h-top-heading {
+}
+
+.xxx {
+    background: url("../img/sample2.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    width: 100%;
+    color: white;
+    background-color: black;
+}
+
+.xxx-black {
     display: flex;
-    justify-content: space-between; }
-  header .h-title {
-    text-align: center; }
-  header h1 {
-    font-size: 4em;
-    font-weight: normal; }
+    justify-content: flex-end;
+    clip-path: polygon(0 0, 100% 100%, 100% 0);
+    background-color: black;
+    color: white;
+}
+
+.xxx-black p {
+    width: 50%;
+    font-size: 0.5em;
+    padding-bottom: 80px;
+}
+
+
+.xxx-white {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.xxx-white p {
+    width: 30%;
+    position: absolute;
+    top: -72px;
+    font-size: 0.9em;
+}
+
+.h-top-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.h-top-heading p {
+    margin-left: 30px;
+}
+
+
+.h-login button {
+    background-color: unset;
+    color: white;
+    margin: 0 20px;
+}
+
+.h-title {
+    text-align: center;
+    margin-top: 140px;
+}
+
+.h-title h1 {
+    font-size: 2em;
+    font-weight: normal;
+}
+
+.h-title h1 span {
+    font-size: 1.5em;
+}
+
+header nav {
+    display: block;
+    padding: 65px 0px;
+}
+header nav ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+.nav-list {
+    list-style: none;
+    border: 1px solid white;
+}
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px;
+    display: block;
+}
