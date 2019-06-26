@@ -104,3 +104,8 @@ header nav ul {
     padding: 10px 30px;
     display: block;
 }
+
+main h2 {
+    text-align: center;
+    font-size: 2em;
+}
