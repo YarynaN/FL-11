@@ -11,6 +11,7 @@ body {
     width: 900px;
     margin: 0 auto;
     font-family: Open Sans, sans-serif;
+    overflow: scroll;
 }
 
 header {
@@ -90,7 +91,6 @@ header {
 }
 
 header nav {
-    display: block;
     padding: 65px 0px;
 }
 
@@ -182,14 +182,34 @@ main h2 {
     background-color: white;
 }
 
+.m-galary section{
+    position: relative;
+}
+
 .m-galary img {
     width: 165px;
     object-fit: cover;
     height: 220px;
+    padding: 36px 0;
+}
+
+.galary-likes {
+    position: absolute;
+    top: 42px;
+    right: 64px;
+    background-color: rgba(0,0,0,.5);
+    font-size: small;
+    border: 2px solid white;
+    color: white;
+    padding: 0px 8px;
+}
+
+.galary-date {
 
 }
 
 .m-load-news {
+    padding-top: 36px;
     display: flex;
     justify-content: center;
     background-color: white;
@@ -199,4 +219,52 @@ main h2 {
     color: white;
     width: 225px;
     height: 35px;
+}
+
+.f-wrapper {
+    background-color: #F3F3F3;
+}
+
+.f-summary p {
+    font-size: small;
+}
+
+.f-subscription {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.f-subscription form input {
+    border: 1px solid black;
+}
+
+.f-subscription form button {
+    background-color: #097774;
+    border: 1px solid black;
+    color: black;
+}
+
+.f-footing {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.f-footing span {
+    color: #E8E8E8
+}
+
+.f-navigation ul{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.f-navigation li {
+    list-style: none;
+    padding: 10px 10px;
+}
+
+.f-navigation a {
+    text-decoration: none;
+    color: black;
 }
