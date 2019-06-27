@@ -14,6 +14,7 @@ body {
 }
 
 header {
+    background-color: #F3F3F3;
 }
 
 .xxx {
@@ -36,7 +37,7 @@ header {
 
 .xxx-black p {
     width: 50%;
-    font-size: 0.5em;
+    font-size: 0.6em;
     padding-bottom: 80px;
 }
 
@@ -45,6 +46,8 @@ header {
     position: relative;
     display: flex;
     justify-content: flex-start;
+    margin-left: 35px;
+    font-size: 0.8em;
 }
 
 .xxx-white p {
@@ -90,14 +93,17 @@ header nav {
     display: block;
     padding: 65px 0px;
 }
+
 header nav ul {
     display: flex;
     justify-content: space-evenly;
 }
+
 .nav-list {
     list-style: none;
     border: 1px solid white;
 }
+
 .nav-list a {
     color: white;
     text-decoration: none;
@@ -105,7 +111,92 @@ header nav ul {
     display: block;
 }
 
+main {
+    width: 900px;
+    background-color: #F3F3F3;
+}
 main h2 {
     text-align: center;
-    font-size: 2em;
+
+}
+
+.m-description {
+    text-align: center;
+    margin: 35px 35px;
+}
+
+.m-description section {
+    margin-top: ;
+}
+
+.m-descr-pic {
+    position: relative;
+}
+
+.m-description section {
+    display: flex;
+    align-items: center;
+}
+
+.description-img {
+    width: 400px;
+    z-index: -1;
+}
+
+.description-likes {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #FFFFFF;
+    background-color: rgba(0,0,0,.5);
+    font-size: small;
+    border: 2px solid white;
+    padding: 2px 5px;
+}
+
+.description-date {
+    position: absolute;
+    bottom: 25px;
+    left: 20px;
+    color: white;
+    font-size: small;
+}
+
+.m-descr-pic-left{
+    float: left;
+}
+
+.m-descr-pic-right{
+    order: 99;
+}
+
+
+.m-description p {
+    font-size: 0.7em;
+    margin: 35px 35px;
+}
+
+.m-galary {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+}
+
+.m-galary img {
+    width: 165px;
+    object-fit: cover;
+    height: 220px;
+
+}
+
+.m-load-news {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+.m-load-news-b {
+    background-color: #097774;
+    color: white;
+    width: 225px;
+    height: 35px;
 }
