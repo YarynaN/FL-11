@@ -42,7 +42,6 @@ header {
     padding-bottom: 80px;
 }
 
-
 .xxx-white {
     position: relative;
     display: flex;
@@ -68,7 +67,6 @@ header {
 .h-top-heading p {
     margin-left: 30px;
 }
-
 
 .h-login button {
     background-color: unset;
@@ -115,9 +113,11 @@ main {
     width: 900px;
     background-color: #F3F3F3;
 }
+
 main h2 {
     text-align: center;
-
+    font-weight: 500;
+    font-size: larger;
 }
 
 .m-description {
@@ -125,55 +125,59 @@ main h2 {
     margin: 35px 35px;
 }
 
-.m-description section {
-    margin-top: ;
+.m-description-xxx {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
 }
 
 .m-descr-pic {
     position: relative;
 }
 
-.m-description section {
-    display: flex;
-    align-items: center;
+.description-img {
+    width: 414px;
 }
 
-.description-img {
-    width: 400px;
-    z-index: -1;
+.description-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    align-items: self-start;
+    height: 98%;
+    width: 413px;
+    top: 0px;
+    box-shadow: inset 0px 0px 64px 15px rgba(0, 0, 0, .1);
 }
 
 .description-likes {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    align-self: flex-end;
+    margin: 10px 10px 0 0;
     color: #FFFFFF;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0, 0, 0, .5);
     font-size: small;
     border: 2px solid white;
     padding: 2px 5px;
 }
 
 .description-date {
-    position: absolute;
-    bottom: 25px;
-    left: 20px;
+    margin: 0 0 12px 12px;
     color: white;
     font-size: small;
 }
 
-.m-descr-pic-left{
+.m-descr-pic-left {
     float: left;
 }
 
-.m-descr-pic-right{
+.m-descr-pic-right {
     order: 99;
 }
 
-
 .m-description p {
     font-size: 0.7em;
-    margin: 35px 35px;
+    margin: 30px 30px;
 }
 
 .m-galary {
@@ -182,7 +186,7 @@ main h2 {
     background-color: white;
 }
 
-.m-galary section{
+.m-galary-wrap {
     position: relative;
 }
 
@@ -200,13 +204,14 @@ main h2 {
     justify-content: space-between;
     position: absolute;
     align-items: center;
-    height: 220px;
-    width: 168px;
-    top: 34px;
+    height: 221px;
+    width: 166px;
+    top: 35px;
+    box-shadow: inset 0px 0px 20px 5px rgba(0, 0, 0, .3);
 }
 
 .galary-likes {
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0, 0, 0, .5);
     font-size: small;
     border: 2px solid white;
     color: white;
@@ -237,6 +242,7 @@ main h2 {
     background-color: white;
     font-size: smaller;
 }
+
 .m-load-news-b {
     background-color: #097774;
     color: white;
@@ -247,6 +253,7 @@ main h2 {
 .f-wrapper {
     background-color: #F3F3F3;
 }
+
 .f-summary {
     height: 152px;
     display: flex;
@@ -285,6 +292,7 @@ main h2 {
 .f-subscription h2 {
     margin-right: 20px;
     font-size: larger;
+    font-weight: 500;
 }
 
 .f-footing {
@@ -297,7 +305,7 @@ main h2 {
     color: #E8E8E8
 }
 
-.f-navigation ul{
+.f-navigation ul {
     display: flex;
     justify-content: flex-end;
 }

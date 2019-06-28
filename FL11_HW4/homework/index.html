@@ -12,13 +12,13 @@
 
 <body>
 <header>
-    <section class="xxx">
+    <div class="xxx">
         <div class="h-top-heading">
             <p> LOREM &amp; IPSUM</p>
-            <section class="h-login">
+            <div class="h-login">
                 <button>Login</button>
                 <button>Signup</button>
-            </section>
+            </div>
         </div>
         <div class="h-title">
             <h1>LOREM <span>&amp;</span> IPSUM</h1>
@@ -32,25 +32,27 @@
                 <li class="nav-list"><a href="#">Show More</a></li>
             </ul>
         </nav>
-    </section>
-    <section class="xxx-black">
+    </div>
+    <div class="xxx-black">
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
             eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
             montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
             pretium quis, sem. Nulla consequat massa quis enim. </p>
-    </section>
-    <section class="xxx-white">
+    </div>
+    <div class="xxx-white">
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing. Aenean <b>commodo ligula</b> eget dolor.</p>
-    </section>
+    </div>
 </header>
 <main>
     <h2>Read some of our <b>featured articles</b></h2>
     <div class="m-description">
-        <section>
+        <div class="m-description-xxx">
             <div class="m-descr-pic m-descr-pic-left">
                 <img src="img/sample-1.jpg" alt="Meeting Spain" class="description-img">
-                <button class="description-likes">154 &#9829;</button>
-                <span class="description-date">July 18 Spain</span>
+                <div class="description-wrap">
+                    <button class="description-likes">154 &#9829;</button>
+                    <span class="description-date">July 18 Spain</span>
+                </div>
             </div>
             <div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore aut
@@ -63,12 +65,14 @@
                     ipsa dicta dolorem a quibusdam eum quasi vel nobis dolores dolore
                     tempora, ex, assumenda quam veritatis, iure optio soluta sequi? </p>
             </div>
-        </section>
-        <section>
+        </div>
+        <div class="m-description-xxx">
             <div class="m-descr-pic m-descr-pic-right">
                 <img src="img/sample-2.jpg" alt="Business center France" class="description-img">
-                <button class="description-likes">172 &#9829;</button>
-                <span class="description-date">January 15 South France</span>
+                <div class="description-wrap">
+                    <button class="description-likes">172 &#9829;</button>
+                    <span class="description-date">January 15 South France</span>
+                </div>
             </div>
             <div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore aut
@@ -81,43 +85,43 @@
                     ipsa dicta dolorem a quibusdam eum quasi vel nobis dolores dolore
                     tempora, ex, assumenda quam veritatis, iure optio soluta sequi? </p>
             </div>
-        </section>
+        </div>
     </div>
 
-    <div class="m-galary">
-        <section>
+    <figure class="m-galary">
+        <div class="m-galary-wrap">
             <img src="img/news-list-1.jpg" alt="Coast Greece">
             <div class="galary-info">
                 <button class="galary-likes"> 10 &#9829;</button>
                 <button class="explore">Explore</button>
                 <p class="galary-date">January 18 Greece</p>
             </div>
-        </section>
-        <section>
+        </div>
+        <div class="m-galary-wrap">
             <img src="img/news-list-2.jpg" alt="Coast Italy">
             <div class="galary-info">
                 <button class="galary-likes"> 35 &#9829;</button>
                 <button class="explore">Explore</button>
                 <p class="galary-date">June 18 Italy</p>
             </div>
-        </section>
-        <section>
+        </div>
+        <div class="m-galary-wrap">
             <img src="img/news-list-3.jpg" alt="Office USA">
             <div class="galary-info">
                 <button class="galary-likes"> 199 &#9829;</button>
                 <button class="explore">Explore</button>
                 <p class="galary-date">December 18 USA</p>
             </div>
-        </section>
-        <section>
+        </div>
+        <div class="m-galary-wrap">
             <img src="img/news-list-4.jpg" alt="Berliner Dom">
             <div class="galary-info">
                 <button class="galary-likes"> 88 &#9829;</button>
                 <button class="explore">Explore</button>
                 <p class="galary-date">May 25 Germany</p>
             </div>
-        </section>
-    </div>
+        </div>
+    </figure>
     <div class="m-load-news">
         <button class="m-load-news-b">Load news</button>
     </div>
@@ -136,7 +140,7 @@
             <div class="f-subscription">
                 <h2>Subscribe to our <b>newsletter</b></h2>
                 <form>
-                    <input type="email" name="email" value="Enter your e-mail" size="16" />
+                    <input type="email" name="email" value="Enter your e-mail" size="16"/>
                     <button>Subscribe</button>
                 </form>
             </div>
