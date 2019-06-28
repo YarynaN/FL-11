@@ -191,38 +191,68 @@ main h2 {
     object-fit: cover;
     height: 220px;
     padding: 36px 0;
+    object-position: 0% 50%;
+}
+
+.galary-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    align-items: center;
+    height: 220px;
+    width: 168px;
+    top: 34px;
 }
 
 .galary-likes {
-    position: absolute;
-    top: 42px;
-    right: 64px;
     background-color: rgba(0,0,0,.5);
     font-size: small;
     border: 2px solid white;
     color: white;
-    padding: 0px 8px;
+    align-self: flex-end;
+    padding: 3px 5px;
+    margin: 10px 14px 0 0;
+}
+
+.explore {
+    background-color: #097774cc;
+    color: white;
+    width: 148px;
+    height: 24px;
+    font-size: small;
 }
 
 .galary-date {
-
+    align-self: flex-start;
+    color: white;
+    font-size: small;
+    margin: 0 0 10px 10px;
 }
 
 .m-load-news {
-    padding-top: 36px;
+    padding-bottom: 36px;
     display: flex;
     justify-content: center;
     background-color: white;
+    font-size: smaller;
 }
 .m-load-news-b {
     background-color: #097774;
     color: white;
     width: 225px;
-    height: 35px;
+    height: 36px;
 }
 
 .f-wrapper {
     background-color: #F3F3F3;
+}
+.f-summary {
+    height: 152px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 12px;
 }
 
 .f-summary p {
@@ -232,16 +262,29 @@ main h2 {
 .f-subscription {
     display: flex;
     justify-content: flex-end;
+    align-items: baseline;
+}
+
+.f-subscription form {
+    font-size: small;
 }
 
 .f-subscription form input {
     border: 1px solid black;
+    padding: 5px 10px;
+    margin-right: 5px;
 }
 
 .f-subscription form button {
     background-color: #097774;
-    border: 1px solid black;
-    color: black;
+    color: white;
+    width: 88px;
+    height: 28px;
+}
+
+.f-subscription h2 {
+    margin-right: 20px;
+    font-size: larger;
 }
 
 .f-footing {
