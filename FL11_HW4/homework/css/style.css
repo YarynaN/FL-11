@@ -18,7 +18,7 @@ header {
     background-color: #F3F3F3;
 }
 
-.xxx {
+.h-wrapper {
     background: url("../img/sample2.jpg");
     background-repeat: no-repeat;
     background-position: top;
@@ -28,7 +28,7 @@ header {
     background-color: black;
 }
 
-.xxx-black {
+.h-wrapper-black {
     display: flex;
     justify-content: flex-end;
     clip-path: polygon(0 0, 100% 100%, 100% 0);
@@ -36,21 +36,23 @@ header {
     color: white;
 }
 
-.xxx-black p {
-    width: 50%;
+.h-wrapper-black p {
+    width: 45%;
     font-size: 0.6em;
     padding-bottom: 80px;
+    padding-right: 35px;
+    text-align: justify;
 }
 
-.xxx-white {
+.h-wrapper-white {
     position: relative;
     display: flex;
     justify-content: flex-start;
-    margin-left: 35px;
+    padding-left: 35px;
     font-size: 0.8em;
 }
 
-.xxx-white p {
+.h-wrapper-white p {
     width: 30%;
     position: absolute;
     top: -72px;
@@ -62,6 +64,7 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 50px;
+    font-size: 0.7em;
 }
 
 .h-top-heading p {
@@ -80,21 +83,26 @@ header {
 }
 
 .h-title h1 {
-    font-size: 2em;
-    font-weight: normal;
+    font-size: 2.4em;
+    font-weight: 100;
 }
 
 .h-title h1 span {
     font-size: 1.5em;
 }
 
+.h-title p {
+    font-size: 0.6em;
+}
+
 header nav {
-    padding: 65px 0px;
+    padding: 62px 0px;
 }
 
 header nav ul {
     display: flex;
     justify-content: space-evenly;
+    font-size: 0.7em;
 }
 
 .nav-list {
@@ -120,22 +128,22 @@ main h2 {
     font-size: larger;
 }
 
-.m-description {
+.m-services {
     text-align: center;
     margin: 35px 35px;
 }
 
-.m-description-xxx {
+.m-service {
     margin-top: 5px;
     display: flex;
     align-items: center;
 }
 
-.m-descr-pic {
+.m-service figure {
     position: relative;
 }
 
-.description-img {
+.m-service-img {
     width: 414px;
 }
 
@@ -167,17 +175,19 @@ main h2 {
     font-size: small;
 }
 
-.m-descr-pic-left {
+.m-figure-left {
     float: left;
+    margin-right: 60px;
 }
 
-.m-descr-pic-right {
+.m-figure-right {
     order: 99;
+    margin-left: 60px;
 }
 
-.m-description p {
+.m-services p {
     font-size: 0.7em;
-    margin: 30px 30px;
+    margin: 30px 0;
 }
 
 .m-galary {
@@ -186,7 +196,7 @@ main h2 {
     background-color: white;
 }
 
-.m-galary-wrap {
+.m-galary figure {
     position: relative;
 }
 
@@ -243,7 +253,7 @@ main h2 {
     font-size: smaller;
 }
 
-.m-load-news-b {
+.m-load-news button {
     background-color: #097774;
     color: white;
     width: 225px;
@@ -255,15 +265,15 @@ main h2 {
 }
 
 .f-summary {
-    height: 152px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 12px;
+    padding: 36px 24px;
 }
 
 .f-summary p {
-    font-size: small;
+    font-size: 0.7em;
+    margin-bottom: 12px;
 }
 
 .f-subscription {
@@ -273,20 +283,22 @@ main h2 {
 }
 
 .f-subscription form {
-    font-size: small;
+    font-size: 0.7em;
 }
 
 .f-subscription form input {
     border: 1px solid black;
-    padding: 5px 10px;
+    padding: 0 10px;
     margin-right: 5px;
+    height: 28px;
+    background-color: #F3F3F3;
 }
 
 .f-subscription form button {
     background-color: #097774;
     color: white;
     width: 88px;
-    height: 28px;
+    height: 30px;
 }
 
 .f-subscription h2 {
@@ -299,23 +311,26 @@ main h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 0.7em;
 }
 
 .f-footing span {
-    color: #E8E8E8
+    color: #9E9E9E;
 }
 
 .f-navigation ul {
     display: flex;
     justify-content: flex-end;
+
 }
 
 .f-navigation li {
     list-style: none;
-    padding: 10px 10px;
+    padding: 10px 0 10px 10px;
 }
 
 .f-navigation a {
     text-decoration: none;
     color: black;
 }
+
