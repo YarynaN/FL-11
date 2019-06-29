@@ -79,11 +79,11 @@ header {
 
 .h-title {
     text-align: center;
-    margin-top: 140px;
+    margin-top: 108px;
 }
 
 .h-title h1 {
-    font-size: 2.4em;
+    font-size: 2.1em;
     font-weight: 100;
 }
 
@@ -96,7 +96,7 @@ header {
 }
 
 header nav {
-    padding: 62px 0px;
+    padding: 100px 0 64px 0;
 }
 
 header nav ul {
