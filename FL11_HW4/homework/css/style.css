@@ -1,0 +1,336 @@
+* {
+    vertical-align: baseline;
+    font-style: inherit;
+    font-size: 100%;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 900px;
+    margin: 0 auto;
+    font-family: "Open Sans", sans-serif;
+    overflow: scroll;
+}
+
+header {
+    background-color: #F3F3F3;
+}
+
+.h-wrapper {
+    background: url("../img/sample2.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    width: 100%;
+    color: white;
+    background-color: black;
+}
+
+.h-wrapper-black {
+    display: flex;
+    justify-content: flex-end;
+    clip-path: polygon(0 0, 100% 100%, 100% 0);
+    background-color: black;
+    color: white;
+}
+
+.h-wrapper-black p {
+    width: 45%;
+    font-size: 0.6em;
+    padding-bottom: 80px;
+    padding-right: 35px;
+    text-align: justify;
+}
+
+.h-wrapper-white {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 35px;
+    font-size: 0.8em;
+}
+
+.h-wrapper-white p {
+    width: 30%;
+    position: absolute;
+    top: -72px;
+    font-size: 0.9em;
+}
+
+.h-top-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    font-size: 0.7em;
+}
+
+.h-top-heading p {
+    margin-left: 30px;
+}
+
+.h-login button {
+    background-color: unset;
+    color: white;
+    margin: 0 20px;
+}
+
+.h-title {
+    text-align: center;
+    margin-top: 108px;
+}
+
+.h-title h1 {
+    font-size: 2.1em;
+    font-weight: 100;
+}
+
+.h-title h1 span {
+    font-size: 1.5em;
+}
+
+.h-title p {
+    font-size: 0.6em;
+}
+
+header nav {
+    padding: 100px 0 64px 0;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 0.7em;
+}
+
+.nav-list {
+    list-style: none;
+    border: 1px solid white;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px;
+    display: block;
+}
+
+main {
+    width: 900px;
+    background-color: #F3F3F3;
+}
+
+main h2 {
+    text-align: center;
+    font-weight: 500;
+    font-size: larger;
+}
+
+.m-services {
+    text-align: center;
+    margin: 35px 35px;
+}
+
+.m-service {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.m-service figure {
+    position: relative;
+}
+
+.m-service-img {
+    width: 414px;
+}
+
+.description-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    align-items: self-start;
+    height: 98%;
+    width: 413px;
+    top: 0px;
+    box-shadow: inset 0px 0px 64px 15px rgba(0, 0, 0, .1);
+}
+
+.description-likes {
+    align-self: flex-end;
+    margin: 10px 10px 0 0;
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, .5);
+    font-size: small;
+    border: 2px solid white;
+    padding: 2px 5px;
+}
+
+.description-date {
+    margin: 0 0 12px 12px;
+    color: white;
+    font-size: small;
+}
+
+.m-figure-left {
+    float: left;
+    margin-right: 60px;
+}
+
+.m-figure-right {
+    order: 99;
+    margin-left: 60px;
+}
+
+.m-services p {
+    font-size: 0.7em;
+    margin: 30px 0;
+}
+
+.m-galary {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+}
+
+.m-galary figure {
+    position: relative;
+}
+
+.m-galary img {
+    width: 165px;
+    object-fit: cover;
+    height: 220px;
+    padding: 36px 0;
+    object-position: 0% 50%;
+}
+
+.galary-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    align-items: center;
+    height: 221px;
+    width: 166px;
+    top: 35px;
+    box-shadow: inset 0px 0px 20px 5px rgba(0, 0, 0, .3);
+}
+
+.galary-likes {
+    background-color: rgba(0, 0, 0, .5);
+    font-size: small;
+    border: 2px solid white;
+    color: white;
+    align-self: flex-end;
+    padding: 3px 5px;
+    margin: 10px 14px 0 0;
+}
+
+.explore {
+    background-color: #097774cc;
+    color: white;
+    width: 148px;
+    height: 24px;
+    font-size: small;
+}
+
+.galary-date {
+    align-self: flex-start;
+    color: white;
+    font-size: small;
+    margin: 0 0 10px 10px;
+}
+
+.m-load-news {
+    padding-bottom: 36px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    font-size: smaller;
+}
+
+.m-load-news button {
+    background-color: #097774;
+    color: white;
+    width: 225px;
+    height: 36px;
+}
+
+.f-wrapper {
+    background-color: #F3F3F3;
+}
+
+.f-summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 36px 24px;
+}
+
+.f-summary p {
+    font-size: 0.7em;
+    margin-bottom: 12px;
+}
+
+.f-subscription {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+}
+
+.f-subscription form {
+    font-size: 0.7em;
+}
+
+.f-subscription form input {
+    border: 1px solid black;
+    padding: 0 10px;
+    margin-right: 5px;
+    height: 28px;
+    background-color: #F3F3F3;
+}
+
+.f-subscription form button {
+    background-color: #097774;
+    color: white;
+    width: 88px;
+    height: 30px;
+}
+
+.f-subscription h2 {
+    margin-right: 20px;
+    font-size: larger;
+    font-weight: 500;
+}
+
+.f-footing {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.7em;
+}
+
+.f-footing span {
+    color: #9E9E9E;
+}
+
+.f-navigation ul {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.f-navigation li {
+    list-style: none;
+    padding: 10px 0 10px 10px;
+}
+
+.f-navigation a {
+    text-decoration: none;
+    color: black;
+}
+
