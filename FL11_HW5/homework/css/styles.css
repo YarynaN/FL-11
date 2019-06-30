@@ -47,13 +47,25 @@ header h1 {
 header h1 span {
     color: #B71757;
 }
+
+.h-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 nav li {
     list-style: none;
+    display: inline-block;
 }
 nav a {
     text-decoration: none;
     font-weight: 100;
     color: white;
+}
+
+article {
+    display: flex;
 }
 
 footer {
@@ -62,9 +74,14 @@ footer {
 
 
 /* Media */
-@media screen and (max-width: 480px) {
-    body {
-
+@media screen and (min-width: 768px) and (max-width: 1400px) {
+    main {
+        display: grid;
+        grid-column: 60% 30%;
+        grid-column-gap: 10%;
+    }
+    article {
+        display:
     }
 }
 
@@ -74,8 +91,8 @@ footer {
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1400px) {
-    body {
+@media screen and (max-width: 480px) {
 
-    }
 }
+
+
