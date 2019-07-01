@@ -1,38 +1,30 @@
-/*
- * Feel free to change name of colors if you need it
- * Feel free to add new colors if you need it
- */
-:root {
-  --bg-color--dark: #0b192f;
-  --bg-color--header: #162b4d;
-  --link: #fff;
-  --link--hover: #b8b8b8;
-  --bg-footer-color: #162b4d;
-}
-
 body {
-  font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .post-1 {
-	background: #B71757;
+    background: #B71757;
 }
+
 .post-2 {
-	background: #0D7E71;
+    background: #0D7E71;
 }
+
 .post-3 {
-	background: #b1660e;
+    background: #b1660e;
 }
+
 .post-4 {
-	background: #d12767;
+    background: #d12767;
 }
+
 .post-5 {
-	background: #2d95bb;
+    background: #2d95bb;
 }
 
 /* Your styles go here */
 
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
@@ -43,6 +35,27 @@ body {
     background-color: #0b192f;
     color: white;
 }
+
+.wrapper {
+    display: grid;
+    grid-template-columns: [column1] 100% [column1-end];
+    grid-template-rows: [row1] min-content [row1-end row2] max-content [row2-end row3] min-content [row3-end];
+}
+
+header {
+    grid-column-start: column1;
+    grid-column-end: column1-end;
+    grid-row-start: row1;
+    grid-row-end: row1-end;
+}
+
+footer {
+    grid-column-start: column1;
+    grid-column-end: column1-end;
+    grid-row-start: row3;
+    grid-row-end: row3-end;
+}
+
 
 header {
     background-color: #162b4d;
@@ -55,6 +68,7 @@ header h1 {
     margin-left: 12px;
     font-size: 3em;
 }
+
 header h1 span {
     color: #B71757;
 }
@@ -67,7 +81,7 @@ header h1 span {
 
 
 nav ul {
-    text-align: canter;
+    text-align: center;
 }
 
 nav li {
@@ -76,18 +90,19 @@ nav li {
     margin: 5px;
     padding: 30px;
 }
+
 nav a {
     text-decoration: none;
     font-weight: 100;
     color: white;
 }
 
-nav li:hover{
+nav li:hover {
     background-color: #293e5e;
 }
 
 
-.m-content article {
+.m-content article img {
     display: block;
 }
 
@@ -116,7 +131,7 @@ footer {
         grid-row-end: row2-end;
 
         display: grid;
-        grid-template-columns: [column1] 70% [column1-end column2] 30% [column2-end];
+        grid-template-columns: [column1] 60% [column1-end column2] 40% [column2-end];
         grid-template-rows: [row1] 100% [row1-end];
     }
 
@@ -136,9 +151,14 @@ footer {
 
 }
 
+/* Mobile */
 @media screen and (max-width: 480px) {
     body {
         max-width: 480px;
+    }
+
+    .wrapper {
+        margin: 0 8px;
     }
 
     main {
@@ -214,20 +234,25 @@ footer {
 
     .post p {
         padding: 0 24px;
+        opacity: 0.5;
     }
 
     .post time {
         position: absolute;
-        font-size: 3em;
+        font-size: 3.5em;
         font-weight: 100;
         text-align: center;
-        opacity: 0.1;
+        opacity: 0.4;
         bottom: 24px;
-        left: 200px;
+        width: 100%;
+    }
+
+    .post time div {
+        font-size: 0.6em;
     }
 
     .a-news {
-        margin: 20px 0;
+        margin: 0 0 16px 0;
     }
 
     .a-news-decription p {
@@ -242,7 +267,7 @@ footer {
     }
 
     aside {
-        margin: 20px 0;
+        margin: 0 0 20px 0;
     }
 
     footer {
@@ -255,10 +280,16 @@ footer {
     }
 }
 
+/* Tablet */
 @media screen and (min-width: 481px) and (max-width: 768px) {
     body {
         max-width: 768px;
     }
+
+    .wrapper {
+        margin: 0 8px;
+    }
+
     header {
         height: 180px;
         margin-bottom: 16px;
@@ -287,8 +318,7 @@ footer {
     }
 
     .m-content {
-        margin-top: 16px;
-        margin-right: 24px;
+        margin-right: 16px;
     }
 
     article img {
@@ -319,11 +349,15 @@ footer {
         text-align: center;
         opacity: 0.4;
         bottom: 24px;
-        left: 220px;
+        width: 100%;
+    }
+
+    .post time div {
+        font-size: 0.6em;
     }
 
     .a-news {
-        margin: 20px 0;
+        margin: 0 0 16px 0;
     }
 
     .a-news-decription p {
@@ -338,7 +372,6 @@ footer {
     }
 
     aside {
-        margin-top: -5px;
     }
 
     footer {
@@ -347,13 +380,34 @@ footer {
         align-items: center;
         justify-content: center;
         text-align: center;
-        padding: 0 56px 0 56px;
+        margin: 16px 0 0 0;
     }
 }
 
+/* Desktop */
 @media screen and (min-width: 769px) {
+    main {
+        grid-column-start: column1;
+        grid-column-end: column1-end;
+        grid-row-start: row2;
+        grid-row-end: row2-end;
+
+        display: grid;
+        grid-template-columns: [column1] 70% [column1-end column2] 30% [column2-end];
+        grid-template-rows: [row1] 100% [row1-end];
+    }
+
+    header {
+        margin-bottom: 16px;
+    }
+
     body {
         max-width: 1400px;
+        margin: auto;
+    }
+
+    .wrapper {
+        margin: 0 8px;
     }
 
     .hamburger {
@@ -361,8 +415,7 @@ footer {
     }
 
     .m-content {
-        margin-top: 16px;
-        margin-right: 24px;
+        margin-right: 16px;
     }
 
     .m-content article {
@@ -370,36 +423,42 @@ footer {
         height: 480px;
     }
 
-    .m-content article:nth-child(odd){
+    .m-content article:nth-child(odd) {
         flex-direction: row;
     }
 
-    .m-content article:nth-child(even){
+    .m-content article:nth-child(even) {
         flex-direction: row-reverse;
     }
 
-    article .post time:nth-child(odd){
+    .post time {
         position: absolute;
         font-size: 3em;
         font-weight: 100;
         text-align: center;
         opacity: 0.4;
+    }
+
+    .post time div {
+        font-size: 0.6em;
+    }
+
+    article:nth-child(odd) .post time {
         top: 24px;
         right: 24px;
     }
 
-    article .post time:nth-child(even){
-        position: absolute;
-        font-size: 3em;
-        font-weight: 100;
-        text-align: center;
-        opacity: 0.4;
+    article:nth-child(even) .post time {
         top: 24px;
         left: 24px;
     }
 
     article img {
         width: 50%;
+    }
+
+    article:last-child {
+        height: unset;
     }
 
     .post {
@@ -409,24 +468,37 @@ footer {
     .post h2 {
         font-weight: 100;
         font-size: 3em;
-        width: 50%;
-        padding: 35px 24px;
+        /*padding: 35px 24px;*/
+    }
+
+    article:nth-child(odd) .post h2 {
+        padding: 35px 220px 35px 24px;
+    }
+
+    article:nth-child(even) .post h2 {
+        padding: 35px 24px 35px 220px;
+        text-align: right;
+    }
+
+    article:nth-child(even) .post p {
+        text-align: right;
     }
 
     .post p {
         padding: 0 24px;
-    }
-
-    .post-5 {
-        height: max-content;
+        opacity: 0.4;
     }
 
     .post-5 h2 {
         width: 100%;
     }
 
+    .post-5 p {
+        padding-bottom: 35px;
+    }
+
     .a-news {
-        margin: 20px 0;
+        margin: 0 0 16px 0;
     }
 
     .a-news img {
@@ -444,40 +516,12 @@ footer {
         padding: 35px 24px;
     }
 
-    aside {
-        margin-top: -5px;
-    }
-
-
-
     footer {
         height: 160px;
         align-items: center;
         justify-content: space-between;
         padding: 0 56px 0 56px;
+        margin: 16px 0 0 0;
     }
 
 }
-
-.wrapper {
-    display: grid;
-    grid-template-columns: [column1] 100% [column1-end];
-    grid-template-rows: [row1] min-content [row1-end row2] max-content [row2-end row3] min-content [row3-end];
-}
-
-header {
-    grid-column-start: column1;
-    grid-column-end: column1-end;
-    grid-row-start: row1;
-    grid-row-end: row1-end;
-}
-
-footer {
-    grid-column-start: column1;
-    grid-column-end: column1-end;
-    grid-row-start: row3;
-    grid-row-end: row3-end;
-}
-
-
-
