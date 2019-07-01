@@ -317,9 +317,9 @@ footer {
         font-size: 3em;
         font-weight: 100;
         text-align: center;
-        opacity: 0.1;
+        opacity: 0.4;
         bottom: 24px;
-        left: 200px;
+        left: 220px;
     }
 
     .a-news {
@@ -356,9 +356,107 @@ footer {
         max-width: 1400px;
     }
 
-    /*.hamburger {*/
-    /*    display: none;*/
-    /*}*/
+    .hamburger {
+        display: none;
+    }
+
+    .m-content {
+        margin-top: 16px;
+        margin-right: 24px;
+    }
+
+    .m-content article {
+        display: flex;
+        height: 480px;
+    }
+
+    .m-content article:nth-child(odd){
+        flex-direction: row;
+    }
+
+    .m-content article:nth-child(even){
+        flex-direction: row-reverse;
+    }
+
+    article .post time:nth-child(odd){
+        position: absolute;
+        font-size: 3em;
+        font-weight: 100;
+        text-align: center;
+        opacity: 0.4;
+        top: 24px;
+        right: 24px;
+    }
+
+    article .post time:nth-child(even){
+        position: absolute;
+        font-size: 3em;
+        font-weight: 100;
+        text-align: center;
+        opacity: 0.4;
+        top: 24px;
+        left: 24px;
+    }
+
+    article img {
+        width: 50%;
+    }
+
+    .post {
+        position: relative;
+    }
+
+    .post h2 {
+        font-weight: 100;
+        font-size: 3em;
+        width: 50%;
+        padding: 35px 24px;
+    }
+
+    .post p {
+        padding: 0 24px;
+    }
+
+    .post-5 {
+        height: max-content;
+    }
+
+    .post-5 h2 {
+        width: 100%;
+    }
+
+    .a-news {
+        margin: 20px 0;
+    }
+
+    .a-news img {
+        width: 100%
+    }
+
+    .a-news-decription p {
+        padding: 0px 24px 24px 24px;
+        color: #b8b8b8
+    }
+
+    .a-news-decription h3 {
+        font-size: 1.5em;
+        font-weight: 300;
+        padding: 35px 24px;
+    }
+
+    aside {
+        margin-top: -5px;
+    }
+
+
+
+    footer {
+        height: 160px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 56px 0 56px;
+    }
+
 }
 
 .wrapper {
