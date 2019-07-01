@@ -489,6 +489,10 @@ footer {
         opacity: 0.4;
     }
 
+    article img:hover {
+        opacity: 0.5;
+    }
+
     .post-5 h2 {
         width: 100%;
     }
