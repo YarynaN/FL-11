@@ -2,13 +2,13 @@
  * Feel free to change name of colors if you need it
  * Feel free to add new colors if you need it
  */
-/*:root {*/
-/*  --bg-color--dark: #0b192f;*/
-/*  --bg-color--header: #162b4d;*/
-/*  --link: #fff;*/
-/*  --link--hover: #b8b8b8;*/
-/*  --bg-footer-color: #162b4d;*/
-/*}*/
+:root {
+  --bg-color--dark: #0b192f;
+  --bg-color--header: #162b4d;
+  --link: #fff;
+  --link--hover: #b8b8b8;
+  --bg-footer-color: #162b4d;
+}
 
 body {
   font-family: "Roboto", sans-serif;
@@ -137,6 +137,10 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
+    body {
+        max-width: 480px;
+    }
+
     main {
         grid-column-start: column1;
         grid-column-end: column1-end;
@@ -162,6 +166,7 @@ footer {
         grid-row-end: row2-end;
     }
 
+
     header {
         height: 180px;
         margin-bottom: 16px;
@@ -170,7 +175,7 @@ footer {
         justify-content: center;
     }
 
-    .hamburger div{
+    .hamburger div {
         width: 15px;
         height: 1px;
         background-color: white;
@@ -188,8 +193,7 @@ footer {
     nav {
         display: none;
     }
-    .m-content article {
-    }
+
 
     article img {
         object-fit: contain;
@@ -197,7 +201,8 @@ footer {
     }
 
     .post {
-        height: 500px;
+        height: 450px;
+        position: relative;
     }
 
     .post h2 {
@@ -206,8 +211,38 @@ footer {
         width: 80%;
         padding: 35px 24px;
     }
+
     .post p {
         padding: 0 24px;
+    }
+
+    .post time {
+        position: absolute;
+        font-size: 3em;
+        font-weight: 100;
+        text-align: center;
+        opacity: 0.1;
+        bottom: 24px;
+        left: 200px;
+    }
+
+    .a-news {
+        margin: 20px 0;
+    }
+
+    .a-news-decription p {
+        padding: 0px 24px 24px 24px;
+        color: #b8b8b8
+    }
+
+    .a-news-decription h3 {
+        font-size: 1.5em;
+        font-weight: 300;
+        padding: 35px 24px;
+    }
+
+    aside {
+        margin: 20px 0;
     }
 
     footer {
@@ -221,22 +256,109 @@ footer {
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
-    .hamburger div{
+    body {
+        max-width: 768px;
+    }
+    header {
+        height: 180px;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .hamburger div {
         width: 15px;
         height: 1px;
         background-color: white;
         margin: 4px 0;
     }
+
+    .hamburger {
+        margin: 24px 0 36px 0;
+    }
+
+    .h-heading {
+        flex-direction: column;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .m-content {
+        margin-top: 16px;
+        margin-right: 24px;
+    }
+
+    article img {
+        object-fit: contain;
+        width: 100%;
+    }
+
+    .post {
+        height: 450px;
+        position: relative;
+    }
+
+    .post h2 {
+        font-weight: 100;
+        font-size: 3em;
+        width: 80%;
+        padding: 35px 24px;
+    }
+
+    .post p {
+        padding: 0 24px;
+    }
+
+    .post time {
+        position: absolute;
+        font-size: 3em;
+        font-weight: 100;
+        text-align: center;
+        opacity: 0.1;
+        bottom: 24px;
+        left: 200px;
+    }
+
+    .a-news {
+        margin: 20px 0;
+    }
+
+    .a-news-decription p {
+        padding: 0px 24px 24px 24px;
+        color: #b8b8b8
+    }
+
+    .a-news-decription h3 {
+        font-size: 1.5em;
+        font-weight: 300;
+        padding: 35px 24px;
+    }
+
+    aside {
+        margin-top: -5px;
+    }
+
+    footer {
+        height: 160px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0 56px 0 56px;
+    }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
     body {
         max-width: 1400px;
     }
 
-    .hamburger {
-        display: none;
-    }
+    /*.hamburger {*/
+    /*    display: none;*/
+    /*}*/
 }
 
 .wrapper {
