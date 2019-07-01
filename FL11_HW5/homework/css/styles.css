@@ -22,8 +22,6 @@ body {
     background: #2d95bb;
 }
 
-/* Your styles go here */
-
 * {
     margin: 0;
     padding: 0;
@@ -66,7 +64,7 @@ header h1 {
     font-weight: 100;
     letter-spacing: 0.1px;
     margin-left: 12px;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 header h1 span {
@@ -247,8 +245,9 @@ footer {
         width: 100%;
     }
 
-    .post time div {
+    .post time span {
         font-size: 0.6em;
+        display: block;
     }
 
     .a-news {
@@ -352,8 +351,9 @@ footer {
         width: 100%;
     }
 
-    .post time div {
+    .post time span {
         font-size: 0.6em;
+        display: block;
     }
 
     .a-news {
@@ -401,6 +401,7 @@ footer {
         margin-bottom: 16px;
     }
 
+
     body {
         max-width: 1400px;
         margin: auto;
@@ -439,8 +440,9 @@ footer {
         opacity: 0.4;
     }
 
-    .post time div {
+    .post time span {
         font-size: 0.6em;
+        display: block;
     }
 
     article:nth-child(odd) .post time {
@@ -468,7 +470,6 @@ footer {
     .post h2 {
         font-weight: 100;
         font-size: 3em;
-        /*padding: 35px 24px;*/
     }
 
     article:nth-child(odd) .post h2 {
@@ -489,7 +490,11 @@ footer {
         opacity: 0.4;
     }
 
-    article img:hover {
+    .m-content article img:hover {
+        opacity: 0.5;
+    }
+
+    .m-content .post:hover {
         opacity: 0.5;
     }
 
