@@ -28,7 +28,6 @@ body {
     border: 0;
 }
 
-/* General Styles */
 body {
     background-color: #0b192f;
     color: white;
@@ -121,7 +120,7 @@ footer {
 
 /* Media */
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
     main {
         grid-column-start: column1;
         grid-column-end: column1-end;
@@ -150,11 +149,7 @@ footer {
 }
 
 /* Mobile */
-@media screen and (max-width: 480px) {
-    body {
-        max-width: 480px;
-    }
-
+@media screen and (min-width: 480px) and (max-width: 767px) {
     .wrapper {
         margin: 0 8px;
     }
@@ -280,11 +275,7 @@ footer {
 }
 
 /* Tablet */
-@media screen and (min-width: 481px) and (max-width: 768px) {
-    body {
-        max-width: 768px;
-    }
-
+@media screen and (min-width: 768px) and (max-width: 1399px) {
     .wrapper {
         margin: 0 8px;
     }
@@ -385,7 +376,7 @@ footer {
 }
 
 /* Desktop */
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1400px) {
     main {
         grid-column-start: column1;
         grid-column-end: column1-end;
