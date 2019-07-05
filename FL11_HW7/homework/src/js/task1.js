@@ -7,7 +7,7 @@ if (emailEntered === null) {
 } else if (emailEntered === "user@gmail.com" || emailEntered === "admin@gmail.com"){
     var password = prompt("Please enter your password, would you?", "");
         if (password === null) {
-            alert("Canceled.");
+            alert("Cancelled.");
         } else if ( emailEntered !== "user@gmail.com" && password !== "UserPass" || emailEntered !== "admin@gmail.com" && password !== "AdminPass"){
         alert("Wrong password");
         }
