@@ -10,7 +10,7 @@ if (agree === false) {
     console.log(secretNum);
     const prizes = [100, 50, 25];
 
-    for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
 
         for (let i = 0; i < 3; i++) {
             console.log(i);
