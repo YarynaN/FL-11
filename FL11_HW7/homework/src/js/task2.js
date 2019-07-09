@@ -23,17 +23,17 @@ while (agreedToPlay === true) {
 
     for (let attemptsNum = maxAttempts; attemptsNum > 0; attemptsNum--) {
         const guessResponse = prompt(
-            'Choose a roulette pocket number from 0 to ' + maxSecretNum + '\n' +
-            'Attempts left: ' + attemptsNum + '\n' +
-            'Total prize: ' + userBalance + '$\n' +
-            'Possible prize on current attempt: ' + possiblePrize + '$',
+            `Choose a roulette pocket number from 0 to ${maxSecretNum}\n` +
+            `Attempts left: ${attemptsNum}\n` +
+            `Total prize: ${userBalance}$\n` +
+            `Possible prize on current attempt: ${possiblePrize }$`,
             ''
         );
         const guess = parseInt(guessResponse);
         if (secretNum === guess) {
             userBalance += possiblePrize;
             agreedToPlay = confirm(
-                'Congratulation, you won! Your prize is: ' + userBalance + '$. Do you want to continue?'
+                `Congratulation, you won! Your prize is: ${userBalance}$. Do you want to continue?`
             );
             break;
         }
@@ -50,7 +50,7 @@ while (agreedToPlay === true) {
         maxSecretNum += secretNumStep;
         maxPrize *= maxPrizeMultiplier;
     } else {
-        alert('Thank you for your participation. Your prize is: ' + userBalance + '$');
+        alert(`Thank you for your participation. Your prize is: ${userBalance}$`);
         agreedToPlay = confirm('Do you want to play again? Right?');
     }
 }
