@@ -3,7 +3,7 @@ function getMin() {
         return NaN;
     }
 
-    let min = Number.MAX_SAFE_INTEGER;
+    let min = Infinity;
     for (let i = 0; i < arguments.length; i++) {
         if (arguments[i] < min) {
             min = arguments[i];
@@ -13,4 +13,4 @@ function getMin() {
     return min;
 }
 
-console.log(getMin(1, 3, 5, -6));
+console.log(getMin(1, 3, 5, 6));
