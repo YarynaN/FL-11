@@ -1,3 +1,12 @@
-let reverseNumber = (num) => parseFloat(num.toString().split('').reverse().join('')) * Math.sign(num);
+let reverseNumber = (num) => {
+    let reverse = 0;
+    while (num !== 0) {
+        const remainder = num % 10;
+        reverse *= 10;
+        reverse += remainder;
+        num = Math.trunc(num / 10);
+    }
+    return reverse;
+}
 
-console.log(reverseNumber(-72721));
+console.log(reverseNumber(-123));
