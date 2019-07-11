@@ -10,4 +10,5 @@ let pipe = (num, ...callbacks) => {
     return pipeRes;
 };
 
+console.log(pipe(1, addOne));
 console.log(pipe(1, addOne, addOne));

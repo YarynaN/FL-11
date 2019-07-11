@@ -1,16 +1,16 @@
-function getMin() {
-    if (arguments.length === 0) {
+let getMin = (...args) => {
+    if (args.length === 0) {
         return NaN;
     }
 
     let min = Infinity;
-    for (let i = 0; i < arguments.length; i++) {
-        if (arguments[i] < min) {
-            min = arguments[i];
+    for (let i = 0; i < args.length; i++) {
+        if (args[i] < min) {
+            min = args[i];
         }
     }
-
+    
     return min;
-}
+};
 
-console.log(getMin(1, 3, 5, 6));
+console.log(getMin(3, 0, -3));
