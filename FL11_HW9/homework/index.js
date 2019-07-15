@@ -1,8 +1,8 @@
 //Task 0
 let getNumbers = (str) => {
     let nums = [];
-    for(let i = 0; i < str.length; i++) {
-        if(!isNaN(str[i])){
+    for (let i = 0; i < str.length; i++) {
+        if (!isNaN(str[i])) {
             nums.push(parseInt(str[i]));
         }
     }
@@ -14,9 +14,9 @@ console.log(getNumbers('n1um3ber95'));
 //Task 1
 let findTypes = (...args) => {
     let objKeys = {};
-    for(let i = 0; i < args.length; i++) {
-        const previousValue = objKeys[typeof(args[i])] === undefined ? 0 : objKeys[typeof(args[i])];
-        objKeys[typeof(args[i])] = previousValue + 1;
+    for (let i = 0; i < args.length; i++) {
+        const previousValue = objKeys[typeof (args[i])] === undefined ? 0 : objKeys[typeof (args[i])];
+        objKeys[typeof (args[i])] = previousValue + 1;
     }
     return objKeys;
 };
@@ -41,20 +41,24 @@ let mapArray = (arr, func) => {
     return resultArray;
 };
 
-console.log(mapArray([2, 5, 8], (el) => {return el + 3}));
+console.log(mapArray([2, 5, 8], (el) => {
+    return el + 3
+}));
 
 //Task 4
- let filterArray = (arr, func) => {
-     let resultArray2 = [];
-     executeForEach(arr, el => {
-         if(func(el)){
-             resultArray2.push(el);
-         }
-     });
-     return resultArray2;
- };
+let filterArray = (arr, func) => {
+    let resultArray2 = [];
+    executeForEach(arr, el => {
+        if (func(el)) {
+            resultArray2.push(el);
+        }
+    });
+    return resultArray2;
+};
 
- console.log(filterArray([2,5,8], (el) => {return el > 3}));
+console.log(filterArray([2, 5, 8], (el) => {
+    return el > 3
+}));
 
 //Task 5
 let showFormattedDate = (date) => {
@@ -87,7 +91,7 @@ console.log(canConvertToDate('2016-11-18T00:00:00'));
 let daysBetween = (date1, date2) => {
     let difference = date2 - date1;
     const millisecondsPerDay = 1000 * 60 * 60 * 24;
-    return Math.round(difference/millisecondsPerDay);
+    return Math.round(difference / millisecondsPerDay);
 };
 
 console.log(daysBetween(new Date('2016-03-18T00:00:00'), new Date('2016-04-19T00:00:00')));
@@ -155,7 +159,7 @@ console.log(keys({keyOne: 1, keyTwo: 2, keyThree: 3}));
 //Task 10
 let values = (obj) => {
     let result = [];
-    for(let propertyName in obj) {
+    for (let propertyName in obj) {
         result.push(obj[propertyName]);
     }
     return result;
