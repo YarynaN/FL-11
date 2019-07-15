@@ -1,5 +1,4 @@
-//0. Write function, which returns array of numbers from string parameter.
-/* 
+//Task 0
 let getNumbers = (str) => {
     let nums = [];
     for(let i = 0; i < str.length; i++) {
@@ -9,11 +8,10 @@ let getNumbers = (str) => {
     }
     return nums;
 };
-console.log(getNumbers('n1um3ber95'));
-*/
 
-//1. Write a function that could receive different amount of parameters
-/*
+console.log(getNumbers('n1um3ber95'));
+
+//Task 1
 let findTypes = (...args) => {
     let objKeys = {};
     for(let i = 0; i < args.length; i++) {
@@ -24,21 +22,17 @@ let findTypes = (...args) => {
 };
 
 console.log(findTypes(1, null, 15, 'cat', true));
-*/
 
-//2. Write function, which iterates over array and executes function on each element.
-/*
+//Task 2
 let executeForEach = (arr, func) => {
     for (let i = 0; i < arr.length; i++) {
         func(arr[i]);
     }
 };
+
 executeForEach([1, 2, 3], (el) => console.log(el));
 
- */
-
-//3. Write function, which returns transformed array based on function, reuse 2
-/*
+//Task 3
 let mapArray = (arr, func) => {
     let resultArray = [];
     executeForEach(arr, el => {
@@ -46,13 +40,10 @@ let mapArray = (arr, func) => {
     });
     return resultArray;
 };
+
 console.log(mapArray([2, 5, 8], (el) => {return el + 3}));
 
- */
-
-
-//4. Write function, which returns filtered array based on function, reuse 2
-/*
+//Task 4
  let filterArray = (arr, func) => {
      let resultArray2 = [];
      executeForEach(arr, el => {
@@ -62,12 +53,10 @@ console.log(mapArray([2, 5, 8], (el) => {return el + 3}));
      });
      return resultArray2;
  };
+
  console.log(filterArray([2,5,8], (el) => {return el > 3}));
 
- */
-
-//5. Write function, which returns formatted date.
-/*
+//Task 5
 let showFormattedDate = (date) => {
     let monNames = [
         "Jan", "Feb", "March",
@@ -75,43 +64,101 @@ let showFormattedDate = (date) => {
         "Jul", "Aug", "Sep",
         "Oct", "Nov", "Dec"
     ];
-
-    let day = date.getDate();
     let monIndex = date.getMonth();
+    let day = date.getDate();
     let year = date.getFullYear();
     return `Date: ${monNames[monIndex]} ${day} ${year}`;
 };
+
 console.log(showFormattedDate(new Date('2019-01-27T01:10:00')));
 
- */
-//6. Write function, which returns Boolean value, is received string parameter can be converted to valid date.
-/*
+//Task 6
 let canConvertToDate = (date) => {
     let convertDate = new Date(date);
     let day = convertDate.getDate();
-    let monIndex = convertDate.getMonth();
-    let year = date.getFullYear();
-
-    return day <= 31 && monIndex <= 12 && year <= 2019;
+    let month = convertDate.getMonth();
+    let year = convertDate.getFullYear();
+    return !Number.isNaN(day) && !Number.isNaN(month) && !Number.isNaN(year);
 };
-console.log(canConvertToDate('2016-13-18T00:00:00'));
 
- */
+console.log(canConvertToDate('2016-11-18T00:00:00'));
 
-
-//7. Write function, which returns difference between two dates in days
-/*
+//Task 7
 let daysBetween = (date1, date2) => {
     let difference = date2 - date1;
-    const millisecndsPerDay = 1000 * 60 * 60 * 24;
-    return Math.round(difference/millisecndsPerDay);
+    const millisecondsPerDay = 1000 * 60 * 60 * 24;
+    return Math.round(difference/millisecondsPerDay);
 };
+
 console.log(daysBetween(new Date('2016-03-18T00:00:00'), new Date('2016-04-19T00:00:00')));
 
- */
+//Task 8
+const task8Data = [
+    {
+        "_id": "5b5e3168c6bf40f2c1235cd6",
+        "index": 0,
+        "birthday": '2016-03-18T00:00:00',
+        "eyeColor": "green",
+        "name": "Stein",
+        "favoriteFruit": "apple"
+    },
+    {
+        "_id": "5b5e3168e328c0d72e4f27d8",
+        "index": 1,
+        "birthday": '1991-02-11T00:00:00',
+        "eyeColor": "blue",
+        "name": "Cortez",
+        "favoriteFruit": "strawberry"
+    },
+    {
+        "_id": "5b5e3168cc79132b631c666a",
+        "index": 2,
+        "birthday": '1984-04-17T00:00:00',
+        "eyeColor": "blue",
+        "name": "Suzette",
+        "favoriteFruit": "apple"
+    },
+    {
+        "_id": "5b5e31682093adcc6cd0dde5",
+        "index": 3,
+        "birthday": '1994-04-17T00:00:00',
+        "eyeColor": "green",
+        "name": "George",
+        "favoriteFruit": "banana"
+    }
+];
 
-//8. Write function, which returns amount of people, who are over 18. Reuse function from task 4,7
 
-//9. Write function, which returns array of keys of an object.
+let getAmountOfAdultPeople = (users) => {
+    let usersFiltered = filterArray(users, el => {
+        const dateDifference = daysBetween(new Date(el.birthday), Date.now());
+        const daysPerYear = 365;
+        const age = dateDifference / daysPerYear;
+        return age > 18;
+    });
+    return usersFiltered.length;
+};
 
-//10. Write function, which returns array of values of an object.
+console.log(getAmountOfAdultPeople(task8Data));
+
+//Task 9
+let keys = (obj) => {
+    let result = [];
+    for (let propertyName in obj) {
+        result.push(propertyName);
+    }
+    return result;
+};
+
+console.log(keys({keyOne: 1, keyTwo: 2, keyThree: 3}));
+
+//Task 10
+let values = (obj) => {
+    let result = [];
+    for(let propertyName in obj) {
+        result.push(obj[propertyName]);
+    }
+    return result;
+};
+
+console.log(values({keyOne: 1, keyTwo: 2, keyThree: 3}));
