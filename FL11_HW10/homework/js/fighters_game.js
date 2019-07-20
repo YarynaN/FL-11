@@ -93,21 +93,3 @@ let battle = (fighterFirst, fighterSecond) => {
         fighterSecond.addLoss();
     }
 };
-
-function foo() {
-    const myFighter = new Fighter({name: 'John', damage: 20, hp: 100, agility: 25});
-    const myFighter2 = new Fighter({name: 'Jim', damage: 20, hp: 100, agility: 13});
-    battle(myFighter, myFighter2);
-    myFighter.heal(100);
-    myFighter2.heal(100);
-    battle(myFighter, myFighter2);
-    battle(myFighter, myFighter2);
-    myFighter.logCombatHistory();
-    myFighter2.logCombatHistory();
-
-
-    // let name = myFighter.getName();
-    // console.log(name); // John
-}
-
-foo();
