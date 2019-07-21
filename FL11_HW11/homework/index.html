@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="./assets/styles.css">
 </head>
 <body>
-  <div id="root">
+<div id="root">
+  <div class="heading">
     <h1>TODO Cat List</h1>
     <form>
       <input type="text" placeholder="Add new action">
@@ -15,52 +16,54 @@
         <i class="material-icons">add_box</i>
       </a>
     </form>
-    <hr />
+  </div>
+
+  <hr/>
+
+  <div class="main">
     <ul>
       <li class="todoItem">
-        <input type="checkbox">
-        Love your cat
-        <a href="#">
-          <i class="material-icons">edit</i>
-        </a>
-        <a href="">
+        <div class="todo">
+          <label>
+            <input type="checkbox">
+            <span>Love your cat</span>
+          </label>
+          <a href="#">
+            <i class="material-icons">edit</i>
+          </a>
+        </div>
+        <a class="delete" href="">
           <i class="material-icons">delete</i>
         </a>
       </li>
-      <li class="todoItem">
-        <input type="checkbox">
-        Love your cat
-        <i class="material-icons">edit</i>
-        <i class="material-icons">delete</i>
-      </li>
-      <li class="todoItem">
-        <input type="checkbox">
-        Love your cat
-        <i class="material-icons">edit</i>
-        <i class="material-icons">delete</i>
-      </li>
-      <li class="todoItem">
-        <input type="checkbox">
-        Love your cat
-        <i class="material-icons">edit</i>
-        <i class="material-icons">delete</i>
-      </li>
-      <li class="todoItem">
-        <input type="checkbox">
-        Love your cat
-        <i class="material-icons">edit</i>
-        <i class="material-icons">delete</i>
-      </li>
-      <li class="todoItem">
-        <input type="checkbox">
-        Love your cat
-        <i class="material-icons">edit</i>
-        <i class="material-icons">delete</i>
+
+      <li class="todoItem editItem">
+        <div class="todo">
+          <input type="text" value="love your cat">
+          <a href="#">
+            <i class="material-icons">save</i>
+          </a>
+        </div>
       </li>
 
-      <i class="material-icons">save</i>
-    </ul>
+      <li class="todoItem">
+        <div class="todo">
+          <label>
+            <input type="checkbox">
+            <span>Love your cat</span>
+          </label>
+          <a href="#">
+            <i class="material-icons">edit</i>
+          </a>
+        </div>
+        <a class="delete" href="">
+          <i class="material-icons">delete</i>
+        </a>
+      </li>
+
   </div>
-  <script src="./src/app.js"></script>
+  </ul>
+</div>
+<script src="./src/app.js"></script>
 </body>
 </html>
