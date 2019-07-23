@@ -18,14 +18,11 @@
       </a>
     </form>
   </div>
-
   <hr/>
-
   <div class="main">
     <ul id="list">
       <li class="hidden todoItem viewMode" id="itemTemplate" draggable="true" ondrop="onDrop(this, event)" ondragover="onAllowDrop(event)" ondragstart="onDrag(event)">
         <div class="todo">
-          <!-- view -->
           <label>
             <input type="checkbox" oninput="markedItemClick(this)" />
             <span class="todoItemText">Love your cat</span>
@@ -33,7 +30,6 @@
           <a class="editIcon" href="#" onclick="onEditAction(this)">
             <i class="material-icons">edit</i>
           </a>
-          <!-- edit -->
           <input class="todoTextInput" type="text" value="love your cat" />
           <a class="saveEdit" href="#" onclick="onSaveAction(this)">
             <i class="material-icons">save</i>
@@ -45,7 +41,6 @@
       </li>
     </ul>
   </div>
-
 </div>
 <script src="./src/app.js"></script>
 </body>
