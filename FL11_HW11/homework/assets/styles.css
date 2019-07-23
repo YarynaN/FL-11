@@ -1,0 +1,192 @@
+* {
+  margin: unset;
+  padding: unset;
+}
+
+
+ul {
+  list-style-type: none;
+}
+
+a:hover {
+  color: #5fa5f2;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 900px;
+  margin: auto;
+  color: #44b3fb;
+}
+
+hr {
+  border: 3px solid #e4f1fe;
+  width: 100%;
+  margin: 24px 0 24px 0;
+}
+
+.heading {
+  width: 900px;
+}
+
+h1 {
+  text-align: center;
+  margin: 25px 0 25px 0;
+}
+
+a {
+  color: #8bc4f2;
+}
+
+.todo {
+  user-select: none;
+  cursor: move;
+}
+
+.todo input[type='checkbox'] {
+  display: none;
+}
+
+.todo input[type='checkbox'] ~ span::before {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  color: grey;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.todo input[type='checkbox']:checked ~ span::before {
+  content: 'check_box';
+}
+
+.todo input[type='checkbox']:checked ~ span {
+  text-decoration: line-through;
+}
+
+.todo input[type='checkbox'] ~ span::before {
+  content: 'check_box_outline_blank';
+
+}
+
+.heading form {
+  display: inline-grid;
+  grid-template-columns: [first] 95% [first-end] 5% [second];
+  width: 100%;
+}
+
+.heading p {
+  text-align: center;
+  color: red;
+}
+
+.heading input {
+  grid-column-start: first;
+  grid-column-end: first-end;
+  border: 1px solid #d4dbe0;
+  border-radius: 4px;
+}
+
+.heading input::placeholder {
+  vertical-align: center;
+  padding-left: 10px;
+}
+
+.heading a {
+  grid-column-start: first-end;
+  grid-column-end: second;
+  align-self: center;
+  justify-self: center;
+}
+
+.heading i {
+  font-size: 2em;
+}
+
+.main {
+  width: 100%;
+}
+
+.todoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo .todoTextInput {
+  width: 300px;
+  height: min-content;
+  font-size: 1em;
+  padding: 8px;
+  color: black;
+  border-radius: 4px;
+  border: 1px solid #d4dbe0;
+}
+
+
+.todo {
+  display: flex;
+  align-items: center;
+}
+
+.todo input {
+  font-size: 3em;
+  width: 24px;
+  color: #8bc4f2;
+}
+
+.todo a {
+  padding-left: 5px;
+}
+
+.not-active {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: grey;
+}
+
+.editMode label {
+  display: none;
+}
+
+.editMode .delete {
+  display: none;
+}
+
+.editMode .editIcon {
+  display: none;
+}
+
+.viewMode .todoTextInput {
+  display: none;
+}
+
+.viewMode .saveEdit {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
