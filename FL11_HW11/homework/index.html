@@ -10,9 +10,10 @@
 <div id="root">
   <div class="heading">
     <h1>TODO Cat List</h1>
+    <p class="hidden">Maximum items per list are created.</p>
     <form>
-      <input type="text" placeholder="Add new action">
-      <a href="#">
+      <input id="todoInput" type="text" placeholder="Add new action" />
+      <a id="addItem" class="not-active" href="#">
         <i class="material-icons">add_box</i>
       </a>
     </form>
@@ -21,48 +22,30 @@
   <hr/>
 
   <div class="main">
-    <ul>
-      <li class="todoItem">
+    <ul id="list">
+      <li class="hidden todoItem viewMode" id="itemTemplate" draggable="true" ondrop="onDrop(this, event)" ondragover="onAllowDrop(event)" ondragstart="onDrag(event)">
         <div class="todo">
+          <!-- view -->
           <label>
-            <input type="checkbox">
-            <span>Love your cat</span>
+            <input type="checkbox" oninput="markedItemClick(this)" />
+            <span class="todoItemText">Love your cat</span>
           </label>
-          <a href="#">
+          <a class="editIcon" href="#" onclick="onEditAction(this)">
             <i class="material-icons">edit</i>
           </a>
-        </div>
-        <a class="delete" href="">
-          <i class="material-icons">delete</i>
-        </a>
-      </li>
-
-      <li class="todoItem editItem">
-        <div class="todo">
-          <input type="text" value="love your cat">
-          <a href="#">
+          <!-- edit -->
+          <input class="todoTextInput" type="text" value="love your cat" />
+          <a class="saveEdit" href="#" onclick="onSaveAction(this)">
             <i class="material-icons">save</i>
           </a>
         </div>
-      </li>
-
-      <li class="todoItem">
-        <div class="todo">
-          <label>
-            <input type="checkbox">
-            <span>Love your cat</span>
-          </label>
-          <a href="#">
-            <i class="material-icons">edit</i>
-          </a>
-        </div>
-        <a class="delete" href="">
+        <a class="delete" href='#' onclick="onDeleteClick(this)">
           <i class="material-icons">delete</i>
         </a>
       </li>
-
+    </ul>
   </div>
-  </ul>
+
 </div>
 <script src="./src/app.js"></script>
 </body>
