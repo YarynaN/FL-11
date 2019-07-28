@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework 12 - Simple TODO List</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+<div id="root">
+  <div id="errorMessage" class="hidden"><span>Error!</span><span id="errorMessageText"></span></div>
+  <div id="todoItems" class="listPage">
+    <h1>Simple TODO app</h1>
+    <button onclick="location.hash = '#add'">Add new task</button>
+    <p class="hidden">TODO is empty</p>
+    <ul id="list">
+    </ul>
+    <ul class="listTemplate">
+      <li id="todoItemTemplate">
+        <input type="checkbox" onchange="checkItem(this)">
+        <a href="#/modify/1">cat1</a>
+        <img src="assets/img/remove-s.jpg" alt="remove" onclick="deleteItem(this)">
+      </li>
+    </ul>
+  </div>
+  <div id="modifyItem" class="hidden">
+    <h1 id="modifyItemHeader">Modify item</h1>
+    <input id="modifyItemInput" type="text"/>
+    <div class="formButtons">
+      <button onclick="cancelModification()">Cancel</button>
+      <button onclick="saveModifiedItem()">Save Changes</button>
+    </div>
+  </div>
+</div>
+<script src="./src/app.js"></script>
+</body>
+</html>
