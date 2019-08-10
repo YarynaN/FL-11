@@ -1,0 +1,64 @@
+@import url("_variables.less");
+
+.navbar-nav{
+  &>.active {
+    background-color: @blue;
+
+    &>.nav-link{
+      color: white;
+      font-weight: bold;
+    }
+  }
+}
+h1,
+h2{
+  color: @blue;
+  margin-top: 24px;
+}
+
+hr{
+  border-color: @blue;
+  margin-top: unset;
+}
+
+.related-class__module {
+  position: relative;
+  width: 212px;
+  height: 164px;
+}
+
+.related-class__module--kickboxing{
+  &:extend(.related-class__module);
+  background-color: @red;
+}
+.related-class__module--fitness{
+  &:extend(.related-class__module);
+  background-color: @blue;
+}
+.related-class__module--zumba{
+  &:extend(.related-class__module);
+  background-color: @orange;
+}
+.related-class__module--bootcamp{
+  &:extend(.related-class__module);
+  background-color: @green;
+}
+
+figure{
+  img{
+    position: absolute;
+    width: 206px;
+    object-fit: contain;
+    left: 3px;
+    top: 3px;
+  }
+  figcaption{
+    position: absolute;
+    bottom: 8px;
+    color: white;
+  }
+}
+
+footer{
+  background-color: @grey;
+}
