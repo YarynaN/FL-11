@@ -1,67 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="./styles/bootstrap.min.css">
-    <title>CSS Frameworks</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="./styles/bootstrap.min.css">
+  <link rel="stylesheet/less" type="text/css" href="./styles/styles.less">
+  <script src="./js/less.min.js" type="text/javascript"></script>
+  <title>CSS Frameworks</title>
 </head>
 <body>
 <header>
-    <img src="img/logo.png" alt="logo"/>
-    <nav>
-        <ul>
-            <li><a>Classes</a></li>
-            <li><a>About us</a></li>
-            <li><a>Contacts</a></li>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <div class="container px-2">
+      <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo"></a>
+      <button class="navbar-toggler my-2" type="button" data-toggle="collapse" data-target="#navbarContent"
+              aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon small"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Classes <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacts</a>
+          </li>
         </ul>
-    </nav>
+      </div>
+    </div>
+  </nav>
 </header>
 <main>
-    <section>
-        <h1>Yoga Pilates</h1>
-        <br/>
-        <img src="img/yoga.jpg" alt="yoga training"/>
+  <section class="container">
+    <h1>Yoga Pilates</h1>
+    <hr/>
+    <div class="row">
+      <div class="col-lg-8 col-md-12 col-sm-12">
+        <img src="img/yoga.jpg" alt="yoga training" class="img-fluid"/>
+      </div>
+      <div class="col-lg-4 col-md-12 col-sm-12">
         <h2>Class Description</h2>
-        <p>This workout uses a series of exercise routines designed to increase your core strength & improve your posture, energy, & flexibility.
-            Pilates work is powered by breath, flow, & centering. By focusing on the mind-body connection & using more efficient form,
-            this workout helps develop a stronger, leaner, healthier body. Appropriate for all fitness levels.</p>
+        <p>This workout uses a series of exercise routines designed to increase your core strength & improve your
+          posture, energy, & flexibility.
+          Pilates work is powered by breath, flow, & centering. By focusing on the mind-body connection & using more
+          efficient form,
+          this workout helps develop a stronger, leaner, healthier body. Appropriate for all fitness levels.</p>
         <ul>
-            <li>One Personal Trainer</li>
-            <li>Big gym space for training</li>
-            <li>Free tools & props</li>
-            <li>Free locker</li>
-            <li>Free before / after shower</li>
+          <li>One Personal Trainer</li>
+          <li>Big gym space for training</li>
+          <li>Free tools & props</li>
+          <li>Free locker</li>
+          <li>Free before / after shower</li>
         </ul>
-    </section>
-    <section>
-        <h2>Related classes</h2>
-        <br/>
-        <div class="row">
-            <figure class="col-lg-3">
-                <img src="img/cardio-kickbox.jpg" alt="cardio-kickbox"/>
-                <figcaption>Cardio kickboxing</figcaption>
-            </figure>
-            <figure class="col-lg-3">
-                <img src="img/fitness.jpg" alt="fitness"/>
-                <figcaption>Fitness xpress</figcaption>
-            </figure>
-            <figure class="col-lg-3">
-                <img src="img/zumba.jpg" alt="zumba"/>
-                <figcaption>Zumba</figcaption>
-            </figure>
-            <figure class="col-lg-3">
-                <img src="img/bootcamp.jpg" alt="bootcamp"/>
-                <figcaption>Bootcamp</figcaption>
-            </figure>
-        </div>
-
-    </section>
+      </div>
+    </div>
+  </section>
+  <section class="container">
+    <h2>Related classes</h2>
+    <hr/>
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
+        <figure class="card mb-3 sm-6 rounded-0 card-red">
+          <img class="card-img-top rounded-0" src="img/cardio-kickbox.jpg" alt="cardio-kickbox"/>
+          <figcaption class="card-body text-white">
+            <p class="card-text small">Cardio kickboxing</p>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <figure class="card mb-3 sm-6 rounded-0 card-blue">
+          <img class="card-img-top rounded-0" src="img/fitness.jpg" alt="cardio-kickbox"/>
+          <figcaption class="card-body text-white">
+            <p class="card-text small">Fitness xpress</p>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <figure class="card mb-3 sm-6 rounded-0 card-orange">
+          <img class="card-img-top rounded-0" src="img/zumba.jpg" alt="cardio-kickbox"/>
+          <figcaption class="card-body text-white">
+            <p class="card-text small">Zumba</p>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <figure class="card mb-3 sm-6 rounded-0 card-green">
+          <img class="card-img-top rounded-0" src="img/bootcamp.jpg" alt="cardio-kickbox"/>
+          <figcaption class="card-body text-white">
+            <p class="card-text small">Bootcamp</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
 </main>
 <footer>
-    <p>&copy; Epam Front-end lab, 2019</p>
+  <div class="container">
+    <div class="text-white footer-content">
+      <span class="small">&copy; Epam Front-end lab, 2019</span>
+    </div>
+  </div>
 </footer>
-
 <script src="./js/jquery.min.js"></script>
 <script src="./js/popper.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>

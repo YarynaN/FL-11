@@ -1,0 +1,59 @@
+@import url("_variables.less");
+
+h1,
+h2{
+  color: @blue;
+  margin-top: @spacer*4;
+}
+
+hr{
+  border-color: @blue;
+  margin-top: unset;
+}
+
+.navbar-light {
+  .navbar-nav {
+    .active {
+      background-color: @blue;
+      >.nav-link {
+        color: white;
+      }
+    }
+  }
+}
+
+.navbar {
+  padding: unset;
+}
+
+.nav-item {
+  padding: @spacer;
+}
+
+.footer-content {
+  background-color: @grey;
+  padding: @spacer*2 @spacer*4;
+}
+
+.card-red{
+  background-color: @red;
+}
+
+.card-blue{
+  background-color: @blue;
+}
+
+.card-orange{
+  background-color: @orange;
+}
+
+.card-green{
+  background-color: @green;
+}
+
+.card {
+  figcaption{
+    text-align: center;
+    padding: @spacer*2;
+  }
+}
