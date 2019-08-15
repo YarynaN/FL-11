@@ -50,7 +50,6 @@ class Patty extends Ingredient{
     }
 }
 
-
 class Hamburger{
     constructor(type, calories, addSceretIngr = false){
         this._type = type;
@@ -131,16 +130,42 @@ class Hamburger{
 
 }
 
-const burger = new Hamburger('nom', 350, true);
-burger.addSecretIngredient();
-burger.addTomato();
-burger.addTomato();
+//happy case
+const burger = new Hamburger('classic', 650, true);
 burger.addCheese();
-burger.bite();
-burger.bite();
-burger.bite();
-
 burger.addTomato();
-
+burger.addTomato();
+burger.bite();
+burger.bite();
+burger.bite();
+burger.bite();
 console.log(burger.info());
 
+//case 2
+const cheeseburger = new Hamburger('cheesy', 900, false);
+cheeseburger.addTomato();
+cheeseburger.addCheese();
+cheeseburger.addCheese();
+cheeseburger.addSecretIngredient();
+cheeseburger.bite();
+console.log(cheeseburger.info());
+
+//case 3
+const bittenBurger = new Hamburger('bitten', 220);
+bittenBurger.bite();
+bittenBurger.addTomato();
+bittenBurger.addCheese();
+console.log(bittenBurger.info());
+
+//case 4
+const extraBurger = new Hamburger('extra', 1200, true);
+extraBurger.calories = 350;
+extraBurger.addSecretIngredient();
+extraBurger.addIngredient(new Patty());
+extraBurger.addTomato();
+extraBurger.addCheese();
+extraBurger.bite();
+extraBurger.addTomato();
+extraBurger.bite();
+extraBurger.bite();
+console.log(extraBurger.info());
