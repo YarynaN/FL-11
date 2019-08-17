@@ -168,9 +168,4 @@ extraBurger.bite();
 extraBurger.addTomato();
 extraBurger.bite();
 extraBurger.bite();
-<<<<<<< HEAD
 console.log(extraBurger.info());
-=======
-console.log(extraBurger.info());
-
->>>>>>> 5674e1fdbe9e590778ba4dff7b979bd0e305daa4
