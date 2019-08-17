@@ -5,3 +5,4 @@ const charizard = new Charizard();
 charmander.getType();
 charmander.getType() === charmeleon.getType();
 charmeleon.getType() === charizard.getType();
+
