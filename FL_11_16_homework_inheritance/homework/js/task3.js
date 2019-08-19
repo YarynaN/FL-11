@@ -95,6 +95,7 @@ function Raichu() {
     this.flying = true;
     this.evolve = () => this;
 }
+
 Pichu.prototype = Object.create(Pokemon.prototype);
 Pichu.prototype.constructor = Pichu;
 
