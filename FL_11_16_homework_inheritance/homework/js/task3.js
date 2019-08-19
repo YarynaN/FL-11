@@ -56,20 +56,20 @@ const charmander = new Charmander();
 const charmeleon = new Charmeleon();
 const charizard = new Charizard();
 
-charmander.getType();
-charmander.getType() === charmeleon.getType();
-charmeleon.getType() === charizard.getType();
+console.log(charmander.getType());
+console.log(charmander.getType() === charmeleon.getType());
+console.log(charmeleon.getType() === charizard.getType());
 
-charmander.evolve().constructor === Charmeleon;
-charmeleon.evolve().constructor === Charizard;
+console.log(charmander.evolve().constructor === Charmeleon);
+console.log(charmeleon.evolve().constructor === Charizard);
 
-charmander.getSpecie();
-charmeleon.getSpecie();
-charizard.getSpecie() === charmeleon.getSpecie();
+console.log(charmander.getSpecie());
+console.log(charmeleon.getSpecie());
+console.log(charizard.getSpecie() === charmeleon.getSpecie());
 
-charmander.canFly();
-charmander.canFly() === charmeleon.canFly();
-charizard.canFly();
+console.log(charmander.canFly());
+console.log(charmander.canFly() === charmeleon.canFly());
+console.log(charizard.canFly());
 
 function Pichu() {
     Pokemon.call(this);
@@ -90,9 +90,9 @@ function Pikachu() {
 function Raichu() {
     Pokemon.call(this);
     this.name = 'Raichu';
-    this.flying = true;
     this.specie = 'Mouse Pokémon';
     this.type = 'Electric';
+    this.flying = true;
     this.evolve = () => this;
 }
 Pichu.prototype = Object.create(Pokemon.prototype);
@@ -105,18 +105,18 @@ Raichu.prototype = Object.create(Pokemon.prototype);
 Raichu.prototype.constructor = Raichu;
 
 const pichu = new Pichu();
-pichu.getPokemonType();
+console.log(pichu.getPokemonType());
 
 const pikachu = pichu.evolve();
-pikachu.getPokemonType();
-pikachu.constructor === Pikachu;
+console.log(pikachu.getPokemonType());
+console.log(pikachu.constructor === Pikachu);
 
 const raichu = pikachu.evolve();
-raichu.getPokemonType();
-raichu.constructor === Raichu;
+console.log(raichu.getPokemonType());
+console.log(raichu.constructor === Raichu);
 
 const raichu2 = raichu.evolve();
-raichu2 === raichu;
+console.log(raichu2 === raichu);
 
 function Meowt() {
     Pokemon.call(this);
@@ -140,8 +140,14 @@ Persian.prototype = Object.create(Pokemon.prototype);
 Persian.prototype.constructor = Persian;
 
 const meowt = new Meowt();
-meowt.getPokemonType();
+console.log(meowt.getPokemonType());
+console.log(meowt.getSpecie());
 
 const persian = meowt.evolve();
-persian.getPokemonType();
-persian.constructor === Persian;
+console.log(persian.getPokemonType());
+console.log(persian.constructor === Persian);
+
+console.log(meowt.getType());
+console.log(meowt.getType() === persian.getType());
+
+console.log(meowt.canFly() === persian.canFly());

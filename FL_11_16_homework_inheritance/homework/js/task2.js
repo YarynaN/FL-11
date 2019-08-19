@@ -2,8 +2,9 @@ const obj1 = { prop: 5 };
 const obj2 = create(obj1);
 
 function create(proto) {
-    // eslint-disable-next-line no-empty-function
-    function Result() {}
+    function Result() {
+        return this;
+    }
     Result.prototype = proto;
     return new Result();
 }
