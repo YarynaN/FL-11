@@ -65,17 +65,14 @@ console.log(add(1));
 console.log(add(1, 3));
 
 // task 8
-let yarasRepos = (url) => {
-    fetch(url)
+let repoList = (userName) => {
+    fetch(`https://api.github.com/users/${userName}/repos`)
         .then(
             (res) => {
                 res.json()
                     .then(
                         (data) => {
-                            let result = [];
-                            for (let i = 0; i < data.length; i++) {
-                                result.push(data[i].name);
-                            }
+                            let result = data.map(repo => repo.name);
                             result.sort();
                             console.log(result);
                         }
@@ -90,24 +87,20 @@ let yarasRepos = (url) => {
         );
 };
 
-yarasRepos('https://api.github.com/users/YarynaN/repos');
+repoList('YarynaN');
 
 
 // task 9
-
-async function reposList(url) {
+async function reposList(userName) {
     try {
-        const response = await fetch(url);
+        const response = await fetch(`https://api.github.com/users/${userName}/repos`);
         const data = await response.json();
-        let result = [];
-        for (let i = 0; i < data.length; i++) {
-            result.push(data[i].name);
-        }
+        let result = data.map(repo => repo.name);
         result.sort();
         console.log(result);
-    } catch (e) {
-        console.log('Request not fulfilled', e)
+    } catch (err) {
+        console.log('Request not fulfilled', err)
     }
 }
 
-reposList('https://api.github.com/users/YarynaN/repos');
+reposList('YarynaN');
