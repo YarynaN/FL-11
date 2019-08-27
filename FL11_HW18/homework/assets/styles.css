@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 900px;
+  margin: auto;
+}
+
+h1 {
+  margin: 24px;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+}
+
+input[type='text'] {
+  border-radius: 4px;
+  height: 24px;
+  width: 100%;
+}
+
+button {
+  border-radius: 4px;
+  background-color: #eee;
+  height: 24px;
+  font-size: 1em;
+}
+
+.listPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.listPage p {
+  text-align: center;
+  margin: 12px 0 12px 0;
+}
+
+.listPage button {
+  width: max-content;
+  padding: 0 10px;
+  align-self: center;
+}
+
+.listPage li {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.formButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.listPage a {
+  text-decoration: none;
+  color: black;
+}
+
+.post {
+  margin: 20px;
+}
+
+.post ion-icon {
+  float: left;
+  padding-right: 4px;
+  opacity: 0.5;
+}
+
+.comment {
+  margin-left: 32px;
+  margin-top: 12px;
+}
+
+.hidden {
+  display: none;
+}
+
+.listTemplate {
+  display: none;
+}

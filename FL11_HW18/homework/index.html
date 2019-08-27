@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework 18 AJAX</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+<div id="root">
+  <div id="userList" class="listPage">
+    <h1>JSONPlaceholder app</h1>
+    <ul id="list">
+    </ul>
+    <ul class="listTemplate">
+      <li id="userTemplate">
+        <a href="#/modify/1">cat1</a>
+        <ion-icon name="trash" onclick="deleteUser(this)"></ion-icon>
+      </li>
+    </ul>
+  </div>
+  <div id="modifyItem" class="hidden">
+    <h1 id="modifyItemHeader">Modify User</h1>
+    <input id="modifyItemInput" type="text"/>
+    <div class="formButtons">
+      <button onclick="cancelModification()">Cancel</button>
+      <button onclick="saveUser()">Save Changes</button>
+    </div>
+    <div id="userPosts">
+    </div>
+    <div id="postsTemplate" class="post hidden">
+      <ion-icon name="send"></ion-icon>
+      <div class="postTitle"></div>
+      <div class="postBody"></div>
+      <div class="userComments"></div>
+    </div>
+    <div id="commentTemplate" class="comment hidden">
+      <ion-icon name="quote"></ion-icon>
+      <div class="commentName"></div>
+      <div class="commentEmail"></div>
+      <div class="commentBody"></div>
+    </div>
+  </div>
+</div>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+<script src="./src/app.js"></script>
+</body>
+</html>
