@@ -1,0 +1,9 @@
+{
+  "name": "FL11_HW19",
+  "version": "1.17.3",
+  "description": "HW19 Tools",
+  "main": "index.js",
+  "repository": "https://github.com/YarynaN/FL-11",
+  "author": "Yaryna Mashta",
+  "license": "MIT"
+}
