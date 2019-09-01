@@ -9,12 +9,14 @@ class Game {
   gameMove(userChoice, onWin, onLose, onDraw) {
     this.gameNumber++;
     let computerChoice = Math.random();
-    if (computerChoice < 0.33) {
-      computerChoice = "rock";
-    } else if (computerChoice <= 0.66) {
-      computerChoice = "paper";
+    const rockProbability = 0.33;
+    const paperProbability = 0.66;
+    if (computerChoice < rockProbability) {
+      computerChoice = 'rock';
+    } else if (computerChoice <= paperProbability) {
+      computerChoice = 'paper';
     } else {
-      computerChoice = "scissors";
+      computerChoice = 'scissors';
     }
 
     let wonUser = false;
@@ -22,7 +24,7 @@ class Game {
     let rules = [
       {winner: 'paper', loser: 'rock'},
       {winner: 'rock', loser: 'scissors'},
-      {winner: 'scissors', loser: 'paper'},
+      {winner: 'scissors', loser: 'paper'}
     ];
 
     rules.forEach(rule => {
