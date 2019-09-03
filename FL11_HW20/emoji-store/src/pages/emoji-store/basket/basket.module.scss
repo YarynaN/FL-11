@@ -1,0 +1,24 @@
+.purchaseList {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+
+  .item {
+    display: flex;
+    justify-content: space-between;
+
+    svg {
+      color: red;
+      font-size: 1em;
+    }
+  }
+}
+
+.emptyText{
+  font-style: italic;
+}
+
+.basketWrapper{
+  background-color: #eee;
+  padding: 1em;
+}

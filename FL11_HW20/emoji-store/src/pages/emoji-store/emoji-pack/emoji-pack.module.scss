@@ -1,0 +1,46 @@
+.icon {
+  position: absolute;
+  color: #fff;
+  text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
+}
+
+.card {
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+  margin-bottom: 1.8em;
+
+  .cardBody{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+    .cardHeader {
+      width: 80px;
+      height: 80px;
+      margin: auto;
+      position: relative;
+
+      span:nth-child(1) {
+        font-size: 3em;
+      }
+
+      span:nth-child(2) {
+        font-size: 2em;
+        left: 34px;
+        top: 26px
+      }
+
+      span:nth-child(3) {
+        font-size: 1.5em;
+        left: 15px;
+        top: 36px;
+      }
+    }
+
+    .cardText {
+      color: orange;
+    }
+  }
+}
