@@ -1,0 +1,11 @@
+.bannerWrapper {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  margin-bottom: 1em;
+
+  button {
+    align-self: flex-end;
+  }
+}
