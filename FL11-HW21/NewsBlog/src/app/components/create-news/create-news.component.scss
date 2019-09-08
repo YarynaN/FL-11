@@ -1,0 +1,15 @@
+.buttons{
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-fluid{
+  background: #eee;
+  margin-bottom: 20px;
+  padding: 14px;
+  border: 1px solid black;
+
+  h1{
+    text-align: center;
+  }
+}
