@@ -12,6 +12,7 @@ import {NewsService} from '../../services/news.service';
 export class LandingPageComponent implements OnInit {
   sourceFilterForm: FormGroup;
   newsItems: any[];
+  selectedNews: string;
 
   constructor(private newsService: NewsService, private formBuilder: FormBuilder) {
   }
@@ -26,5 +27,6 @@ export class LandingPageComponent implements OnInit {
 
   filterNews(value: any) {
     this.newsItems = this.newsService.getItems(value.source, value.keyword);
+    this.selectedNews = value.source;
   }
 }
