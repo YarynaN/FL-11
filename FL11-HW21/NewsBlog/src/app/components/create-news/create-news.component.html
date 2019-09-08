@@ -1,0 +1,41 @@
+<header class="container-fluid">
+  <h1>Create news!</h1>
+</header>
+<main>
+  <div class="card container" style="width: 40rem;">
+    <form class="row card-body" [formGroup]="newsForm">
+      <div class="col">
+        <div class="form-group">
+          <label>Heading</label>
+          <input type="text" class="form-control" formControlName="heading"/>
+        </div>
+        <div class="form-group">
+          <label>Short Description</label>
+          <input type="text" class="form-control" formControlName="shortDescription">
+        </div>
+        <div class="form-group">
+          <label>Content</label>
+          <textarea formControlName="content" class="form-control" rows="4"></textarea>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label>Date</label>
+          <input type="date" class="form-control" formControlName="date"/>
+        </div>
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" class="form-control" formControlName="name">
+        </div>
+        <div class="form-group">
+          <label>Source URL</label>
+          <input type="url" class="form-control" formControlName="source"/>
+        </div>
+        <div class="buttons">
+          <button type="submit" class="btn btn-primary" (click)="addNewsItem(newsForm.value)">Save</button>
+          <button type="submit" class="btn btn-primary" routerLink="/">Cancel</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</main>
