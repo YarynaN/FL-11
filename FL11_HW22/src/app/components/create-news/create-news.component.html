@@ -28,8 +28,10 @@
           <input type="text" class="form-control" formControlName="name">
         </div>
         <div class="form-group">
-          <label>Source URL</label>
-          <input type="url" class="form-control" formControlName="source"/>
+          <label>Source Name</label>
+          <select class="form-control" formControlName="source">
+            <option value="{{source}}" *ngFor="let source of this.newsService.getSources()">{{source}}</option>
+          </select>
         </div>
         <div class="buttons">
           <button type="submit" class="btn btn-primary" (click)="addNewsItem(newsForm.value)">Save</button>

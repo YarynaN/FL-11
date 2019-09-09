@@ -20,7 +20,7 @@
   </div>
 </header>
 <main>
-  <div class="card container" *ngFor="let news of newsItems" style="width: 60rem;">
+  <div class="card container" *ngFor="let news of newsItems | async" style="width: 60rem;">
     <div class="row">
       <div class="col-auto">
         <img src="../../../assets/images/download.png" alt="Card image cap">

@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
 
 import {NewsService} from '../../services/news.service';
+import {Observable} from 'rxjs';
 
 
 @Component({
@@ -11,7 +12,7 @@ import {NewsService} from '../../services/news.service';
 })
 export class LandingPageComponent implements OnInit {
   sourceFilterForm: FormGroup;
-  newsItems: any[];
+  newsItems: Observable<any[]>;
   selectedNews: string;
 
   constructor(private newsService: NewsService, private formBuilder: FormBuilder) {

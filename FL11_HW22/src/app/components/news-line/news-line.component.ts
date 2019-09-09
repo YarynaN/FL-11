@@ -12,10 +12,13 @@ export class NewsLineComponent implements OnInit {
   newsItem: any;
 
   constructor(private newsService: NewsService, private route: ActivatedRoute) {
+    this.newsItem = {};
   }
 
   ngOnInit() {
-    this.newsItem = this.newsService.getNewsItemById(this.route.snapshot.paramMap.get('id'));
+    this.newsService.getNewsItemById(this.route.snapshot.paramMap.get('id')).subscribe(obj => {
+      this.newsItem = obj;
+    });
   }
 
 }
