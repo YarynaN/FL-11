@@ -1,0 +1,38 @@
+<header>
+  <div class="container-fluid">
+    <h1>{{this.selectedNews || 'All News'}}</h1>
+    <form [formGroup]="sourceFilterForm">
+      <div class="row">
+        <div class="col">
+          <select formControlName="source" (change)="filterNews(sourceFilterForm.value)">
+            <option value="{{source}}" *ngFor="let source of this.newsService.getSources()">{{source}}</option>
+          </select>
+        </div>
+        <div class="col">
+          <input type="text" placeholder="type your text..." formControlName="keyword"/>
+          <button type="button" class="btn btn-light" (click)="filterNews(sourceFilterForm.value)">filter</button>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-light" routerLink="/create-news">Add article</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</header>
+<main>
+  <div class="card container" *ngFor="let news of newsItems" style="width: 60rem;">
+    <div class="row">
+      <div class="col-auto">
+        <img src="../../../assets/images/download.png" alt="Card image cap">
+      </div>
+      <div class="col-lg-6 card-body">
+        <h5 class="card-title">{{news.title}}</h5>
+        <p class="card-text">{{news.shortContent}}</p>
+        <a href="news-line/{{news.id}}" class="card-link">Read more...</a>
+      </div>
+      <div class="col-auto">
+        <time datetime="2015-05-15 19:00">{{news.date}}</time>
+      </div>
+    </div>
+  </div>
+</main>
